@@ -1,0 +1,38 @@
+.mtv-grid
+    display: grid
+    grid-template-columns: 1.3fr 1fr
+    grid-column-gap: 42px
+    &__img
+        grid-row: 1/4
+        grid-column: 2/-1
+    &__text
+        margin-bottom: 63px
+        display: block
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            width: 90px
+            height: 90px
+            background-image: url('../img/nimes-montpellier/arrow.svg')
+            background-size: contain
+            background-repeat: no-repeat
+            right: 0
+            bottom: -41px
+
+@media screen and ( max-width: 1199px )
+    .mtv-grid
+        grid-template-columns: 1fr 1fr
+        &__img
+            align-self: center
+
+@media screen and ( max-width: 767px )
+    .mtv-grid
+        display: flex
+        flex-direction: column
+        &__text
+            margin-bottom: 42px
+            &::before
+                display: none
+        &__img
+            margin-bottom: 50px

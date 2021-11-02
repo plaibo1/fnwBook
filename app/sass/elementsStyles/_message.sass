@@ -1,0 +1,56 @@
+.message
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    &.yellow
+        .message__box
+            background-color: $yellow
+            &::before
+                border-color: transparent $yellow transparent transparent
+                left: -15px
+                border-width: 0 39px 39px 0
+    &.purple
+        .message__box
+            background-color: $purple
+            color: $text-white
+            &::before
+                border-color: $purple transparent transparent transparent
+                right: -15px
+                border-width: 39px 39px 0 0
+                
+    &.keft
+        .message__box
+            background-color: $yellow
+    &.right
+        .message__box
+            margin-left: auto
+    &__box
+        padding: 15px
+        padding-left: 20px
+        border-radius: 10px
+        margin: 20px 0
+        position: relative
+        z-index: 190
+        &::before
+            content: ""
+            position: absolute
+            width: 0
+            height: 0
+            z-index: -1
+            border-style: solid
+            top: 0
+        &.pl
+            padding-left: 35px
+    
+    &__mind
+        margin: 30px 0
+        margin-left: 10%
+
+
+@media ( max-width: 768px )
+    .message__box
+        margin-right: 20px
+        margin-left: 20px
+    .message__mind
+        margin-left: 30%
+    

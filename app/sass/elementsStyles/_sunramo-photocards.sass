@@ -1,0 +1,75 @@
+.sunramo-photocards
+    &-1
+        transform: rotate(6deg) translateX(-0px)
+        width: 90%
+        @media screen and ( max-width: 991px )
+            width: 87%
+        @media screen and ( max-width: 767px )
+            width: 90%
+            margin: 0 auto
+            transform: none
+            margin-bottom: 42px
+            
+            
+    &-2
+        transform: rotate(-5deg) translateX(35px)
+        position: absolute
+        bottom: 0
+        width: 90%
+        @media screen and ( max-width: 991px )
+            width: 87%
+            right: 0
+
+        @media screen and ( max-width: 767px )
+            position: relative
+            width: 90%
+            margin: 0 auto
+            transform: none
+            
+    
+    &-text
+        margin-top: 100px
+        position: relative
+        @media screen and ( max-width: 767px )
+            margin-top: 0
+            margin-bottom: 42px
+            
+            
+        &:nth-child(1)
+            &::before
+                content: ""
+                position: absolute
+                width: 102px
+                height: 52px
+                background-image: url('../img/nice-sanremo/arrow.png')
+                position: absolute
+                bottom: -60%
+                @media screen and ( max-width: 991px )
+                    bottom: -42%
+                    right: -10%
+                    transform: rotate(-55deg)
+                @media screen and ( max-width: 425px )
+                    right: auto
+                    left: 50%
+                    width: 28px
+                    height: 34px
+                    background-size: cover
+                    background-image: url('../img/nice-sanremo/arrow2.png')
+                    transform: rotate(10deg)
+                    bottom: -25%
+                    
+    &-text-2
+        margin-top: 107px
+        @media screen and ( max-width: 767px )
+            margin-top: 0
+            margin-bottom: 42px
+            
+
+    &-oreder-sm-1
+        @media screen and ( max-width: 767px )
+            order: 1
+            
+    &-oreder-sm-2
+        @media screen and ( max-width: 767px )
+            order: 2
+            

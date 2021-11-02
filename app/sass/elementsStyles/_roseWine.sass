@@ -1,0 +1,26 @@
+.roseWine
+    background-color: #d76176
+    padding: 20px 0
+    overflow: hidden
+    @media screen and ( max-width: 767px )
+        padding-top: 32px
+        
+    p
+        color: #fff
+        font-size: 18px
+        font-weight: 400
+        line-height: 23px
+    &-img
+        position: relative
+        img:nth-child(2)
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+            bottom: -17%
+            height: 100%
+            width: auto !important
+                
+    &__help-col
+        @media screen and ( max-width: 767px )
+            display: none
+            

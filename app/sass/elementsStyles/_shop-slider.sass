@@ -1,0 +1,101 @@
+.shop-slider
+    &__slide-wrapper
+        display: flex
+        align-items: center
+        padding: 30px 20px
+    &__slide
+        &__info
+            position: relative
+            width: 90%
+            &__graph
+                width: 92%
+                display: flex
+                align-items: center
+                margin: 6.6px 0
+                &__num
+                    font-size: 15px
+                    color: #898989
+                    margin-right: 20px
+                &__strip
+                    width: 100%
+                    height: 10px
+                    background-color: #DADCE0
+                    border-radius: 100px
+                    position: relative
+                    &__progress
+                        position: absolute
+                        left: 0
+                        top: 0
+                        width: 0%
+                        height: 100%
+                        background-color: #FBBC04
+                        border-radius: 100px
+
+
+        &__rating
+            min-width: 30%
+            text-align: center
+            &__num
+                font-size: 3.3em
+            &__t
+                font-size: 14px
+                color: #898989
+
+    &__t
+        &__nick
+            display: flex
+            align-items: center
+            img
+                width: 46px
+                // height: 45px
+                margin-right: 10px
+            span
+                font-weight: 500
+                font-size: 15.7px
+        &__text
+            font-size: 15.67px
+            font-weight: 400
+            margin-left: 55px
+            line-height: 19,63px
+
+
+.swiper-wrapper
+    width: auto !important
+
+.swiper-button
+    &-next
+        display: none
+        background-image: url('../img/amsterdam01/next.svg')
+        width: 15px
+        background-size: contain
+        right: -25px
+    &-prev
+        display: none
+        background-image: url('../img/amsterdam01/prev.svg')
+        width: 15px
+        background-size: contain
+        left: -25px
+        
+@media screen and ( max-width: 767px )
+    .swiper-button
+        &-next
+            display: block
+        &-prev
+            display: block
+    .swiper-container
+        overflow: visible
+    
+@media screen and ( max-width: 375px )
+    .shop-slider
+        &__slide-wrapper
+            padding: 25px 5px
+
+@media screen and ( max-width: 320px )
+    .shop-slider
+        &__slide-wrapper
+            padding: 25px 0px
+
+    .shop-slider__slide__rating__stars img
+        width: 70px
+    .shop-slider__slide__rating__t
+        font-size: 13px

@@ -1,0 +1,98 @@
+.eyes
+    position: relative
+    width: 100%
+    display: flex
+    justify-content: center
+    &__img
+        position: absolute
+        &:nth-child(1)
+            width: 120px
+            left: 30px
+            top: 20%
+            animation: eyes 1.5s linear infinite
+        &:nth-child(2)
+            width: 150px
+            left: -50px
+            top: 43%
+            animation: eyes 1.5s linear infinite .4s
+        &:nth-child(3)
+            width: 100px
+            left: -70px
+            top: 70%
+            animation: eyes 1.5s linear infinite 1s
+        &:nth-child(4)
+            width: 130px
+            left: 30px
+            top: 90%
+            animation: eyes 1.5s linear infinite .545s
+        &:nth-child(5)
+            width: 110px
+            left: -50px
+            top: 115%
+            animation: eyes 1.5s linear infinite 1.3s
+
+        &:nth-child(6)
+            width: 130px
+            right: 70px
+            top: 11%
+            animation: eyes 1.5s linear infinite .31s
+        &:nth-child(7)
+            width: 110px
+            right: 20px
+            top: 36%
+            animation: eyes 1.5s linear infinite 1s
+        &:nth-child(8)
+            width: 130px
+            right: 73px
+            top: 63%
+            animation: eyes 1.5s linear infinite 1.5s
+        &:nth-child(9)
+            width: 110px
+            right: 6px
+            top: 86%
+            animation: eyes 1.5s linear infinite .2s
+
+@media screen and ( max-width: 1199px )
+    .eyes
+        &__img
+            &:nth-child(1)
+                width: 110px
+                top: 22%
+            &:nth-child(2)
+                width: 135px
+                left: -20px
+            &:nth-child(3)
+                left: 10px
+            &:nth-child(4)
+                left: 10px
+            &:nth-child(5)
+                width: 80px
+                left: -15px
+                top: 117%
+
+            &:nth-child(6)
+                width: 124px
+                right: 24px
+            &:nth-child(7)
+                width: 124px
+                right: 55px
+            &:nth-child(8)
+                width: 107px
+                right: 79px
+                top: 65%
+
+@media screen and ( max-width: 991px )
+    .eyes
+        &__img
+            display: none
+
+
+@keyframes eyes
+    0%
+        opacity: 0
+    25%
+        opacity: 0
+    50%
+        opacity: 1
+    100%
+        opacity: 0

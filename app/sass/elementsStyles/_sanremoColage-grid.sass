@@ -1,0 +1,39 @@
+.sanremoColage-grid
+    display: grid
+    grid-template-columns: 2fr .9fr
+    grid-column-gap: 70px
+    align-items: end
+    &__box
+        grid-column: 1/2
+        grid-row: 5/8
+    &__img
+        grid-row: 1/10
+        grid-column: 2/3
+    &__text
+        margin-bottom: 50px
+        grid-row: 2/5
+    &__slider
+        display: none
+
+@media screen and ( max-width: 1199px )
+    .sanremoColage-grid
+        grid-template-columns: 2fr 1.1fr
+        &__box
+        &__text
+        &__img
+            align-self: center
+
+@media screen and ( max-width: 991px )
+    .sanremoColage-grid
+        display: flex
+        flex-direction: column
+        &__text
+            order: -2
+        &__slider
+            display: block
+            order: -1
+            margin-bottom: 50px
+        &__img
+            display: none
+        
+    

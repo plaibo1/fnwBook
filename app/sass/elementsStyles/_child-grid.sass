@@ -1,0 +1,33 @@
+.child-grid
+    display: grid
+    grid-template-columns: 2fr 5fr
+    grid-column-gap: 40px
+    &__bigText
+    &__text
+        grid-column: 2/2
+    &__img
+        grid-row: 1/3
+        align-self: end
+
+@media ( max-width: 1024px )
+    .child-grid
+        &__bigText
+        &__text
+            grid-column: 1/3
+        &__img
+            align-self: start
+    
+@media ( max-width: 768px )
+    .child-grid
+        &__img
+            align-self: center
+
+@media ( max-width: 767px )
+    .child-grid
+        display: flex
+        flex-direction: column
+        &__bigText
+            order: -2
+        &__img
+            margin-bottom: 32px
+    

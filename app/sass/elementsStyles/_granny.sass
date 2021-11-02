@@ -1,0 +1,61 @@
+.granny-show
+    display: none
+    position: relative
+    margin-top: 15px
+    &-posa
+        width: 100%
+        position: absolute
+        left: 50%
+        top: 0
+        transform: translateX(-50%) translateY(20px)
+        img
+            width: 130% !important
+
+            
+
+.img-granny
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    width: 100%
+
+.text-granny
+    margin-top: 47px
+
+.img-granny-2
+    margin-bottom: -10px
+
+
+[data-aos="granny-1"]
+    transform: translateX(0%)
+    &.aos-animate
+        transform: translateX(-300%)
+
+    
+[data-aos="granny-2"]
+    transform: translateX(300%)
+    &.aos-animate
+        transform: translateX(0%)
+
+// [data-aos="granny-1-sm"]
+//     opacity: 1
+//     transform: translateX(0%)
+//     &.aos-animate
+//         transform: translateX(-100%)
+//         opacity: 0
+
+// [data-aos="granny-2-sm"]
+//     opacity: 0
+//     transform: translateX(100%)
+//     &.aos-animate
+//         transform: translateX(0%)
+//         opacity: 1
+
+@media screen and ( max-width: 991px )
+    .granny-show
+        display: block
+    .granny-hide
+        display: none
+    .text-granny
+        margin-top: 0
+    

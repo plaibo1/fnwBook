@@ -1,0 +1,94 @@
+.main.lyon-02
+    padding-top: 0
+.header-lyon-02
+    position: relative
+    padding-top: 80px
+    background-image: url("../img/lyon02/pot-lg.jpg")
+    background-size: 100%
+    background-position: center 100%
+    background-repeat: no-repeat
+    overflow: hidden
+    z-index: 10
+
+    @media screen and ( max-width: 1440px )
+        background-size: cover
+        background-image: url("../img/lyon02/pot-md.jpg")
+
+    @media screen and ( max-width: 576px )
+        background-size: cover
+        background-image: url("../img/lyon02/pot-sm.jpg")
+
+    &__waterdrops
+        position: absolute
+        width: 100%
+        height: 100%
+        background-image: url("../img/lyon02/waterdrops.svg")
+        top: 0
+        left: 0
+        background-size: cover
+        background-repeat: no-repeat
+        animation: waterdrop 20s linear infinite
+
+        // @media screen and ( max-width: 425px )
+        //     animation: waterdrop 17s linear infinite
+
+    &__waterdrops2
+        position: absolute
+        width: 100%
+        height: 100%
+        background-image: url("../img/lyon02/waterdrops.svg")
+        top: 0
+        left: 0
+        background-size: cover
+        background-repeat: no-repeat
+        animation: waterdrop 20s linear infinite 15s
+        transform: translateY(-100%)
+
+        // @media screen and ( max-width: 425px )
+        //     animation: waterdrop 17s linear infinite 9s
+        // @media screen and ( max-width: 369px )
+        //     animation: waterdrop 17s linear infinite 6.7s
+            
+    
+    &__waterdrops, &__waterdrops2
+        z-index: -1
+        @media screen and ( max-width: 1024px )
+            background-image: url("../img/lyon02/waterdrops-md.svg")
+            background-size: contain
+        @media screen and ( max-width: 767px )
+            background-image: url("../img/lyon02/waterdrops-sm.svg")
+            background-size: cover
+            background-position: 0 20px
+        @media screen and ( max-width: 369px )
+            background-size: contain
+
+    &__waterdropsOut
+        width: 100%
+        height: 40%
+        position: absolute
+        bottom: 0
+        left: 0
+        background: linear-gradient(0deg, #ffffff 19%, rgba(255,255,255,0) 100%)
+        // background-color: #acd123
+            
+            
+            
+    // &::after
+    //     content: ""
+    //     position: absolute
+    //     width: 100%
+    //     height: 100%
+    //     background-image: url("../img/lyon02/waterdrops.svg")
+    //     top: 0
+    //     left: 0
+    //     background-size: cover
+    //     background-repeat: no-repeat
+    //     background-position: center -150%
+    //     animation: waterdrop 10s linear infinite 5s
+
+
+@keyframes waterdrop
+    0%
+        transform: translateY(-100%)
+    100%
+        transform: translateY(100%)

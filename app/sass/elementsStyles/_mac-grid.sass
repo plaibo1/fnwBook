@@ -1,0 +1,57 @@
+.mac-grid
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: auto auto
+    grid-column-gap: 30px
+    &__bigText > p:nth-child(2)
+        margin-bottom: 32px
+        
+    &__text
+    &__mac
+    &__box
+
+@media screen and ( max-width: 1024px )
+    .mac-grid
+        &__bigText
+            grid-column: 1/1
+            grid-row: 1/3
+        &__text
+            grid-column: 1/-1
+            padding: 0 81px 0 81px
+        &__mac
+        &__box
+            grid-column: 2/2
+            grid-row: 2/2
+
+@media screen and ( max-width: 768px )
+    .mac-grid
+        &__bigText
+        &__text
+            padding: 0
+        &__mac
+            height: 318px
+            display: flex
+            align-items: center
+            justify-content: center
+            overflow: hidden
+            align-self: start
+            img
+                transform: scale(1.8)
+
+@media screen and ( max-width: 767px )
+    .mac-grid
+        display: flex
+        flex-direction: column
+        &__mac
+            order: -2
+            height: auto
+            margin-bottom: 32px
+            img
+                transform: scale(1)
+        &__text
+            padding: 0
+            order: 1
+        &__box
+            margin-bottom: 32px
+        &__bigText > p:nth-child(2)
+            margin-bottom: 50px

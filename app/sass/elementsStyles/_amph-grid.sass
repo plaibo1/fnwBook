@@ -1,0 +1,44 @@
+.amph-grid
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    &__text1
+        grid-column: 1/8
+        align-self: center
+    &__text2
+        grid-column: 1/5
+        margin-bottom: 50px
+    &__text3
+        grid-column: 1/5
+    &__img1
+        grid-column: 8/-1
+    &__img2
+        grid-column: 6/-1
+        grid-row: 2/5
+        
+@media screen and ( max-width: 991px )
+    .amph-grid
+        grid-column-gap: 15px
+        &__img2
+            grid-column: 1/-1
+            margin: 32px 0
+        &__text2
+            grid-column: 1/-1
+        &__text3
+            grid-column: 1/-1
+
+@media screen and ( max-width: 576px )
+    .amph-grid
+        display: flex
+        flex-direction: column
+        &__text1
+            margin-bottom: 42px
+        &__img1
+            margin-bottom: 42px
+        &__img2
+            grid-column: 1/-1
+            margin: 32px 0
+        &__text2
+            grid-column: 1/-1
+        &__text3
+            grid-column: 1/-1
+    

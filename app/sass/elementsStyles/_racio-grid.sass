@@ -1,0 +1,54 @@
+.racio-grid
+    display: grid
+    grid-template-columns: 1fr 1fr
+    position: relative
+    &__img
+        position: absolute
+        width: 90%
+        img
+            width: 100%
+    &__text1
+        grid-column: 1/2
+    &__text2
+        grid-column: 2/3
+        margin-top: 69%
+    &__img-sm
+        display: none
+        img
+            width: 100%
+    
+
+@media screen and ( max-width: 1199px )
+    .racio-grid
+        &__img
+            width: 100%
+    
+@media screen and ( max-width: 767px )
+    .racio-grid
+        grid-template-columns: 1fr .2fr
+        &__text2
+            grid-column: 1/2
+            grid-row: 2/3
+            margin-top: 50px
+        &__img
+            width: 63%
+            right: -27%
+            bottom: 20%
+            transform: rotate(115deg)
+        
+@media screen and ( max-width: 536px )
+    .racio-grid
+        grid-template-columns: 1fr .2fr
+        &__text2
+            grid-column: 1/2
+            grid-row: 2/3
+            margin-top: 50px
+        &__img
+            display: none
+        &__img-sm
+            display: block
+            position: absolute
+            width: 20%
+            right: -10px
+            top: 50%
+            transform: translateY(-50%)

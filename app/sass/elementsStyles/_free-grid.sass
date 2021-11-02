@@ -1,0 +1,38 @@
+.free-grid
+    display: grid
+    grid-template-columns: 2fr 3fr
+    grid-column-gap: 40px
+    &__img
+        grid-row: 1/3
+        margin-top: 10px
+        &-sm
+            display: none !important
+        &-xl
+    &__text
+        margin-bottom: 18px
+    &__box
+        grid-column: 2/3
+
+
+@media screen and ( max-width: 1024px )
+    .free-grid
+        &__img
+            margin-top: 0
+            align-self: center
+            &-sm
+                display: block !important
+            &-xl
+                display: none !important
+        &__box
+            grid-column: 1/3
+
+@media screen and ( max-width: 767px )
+    .free-grid
+        display: flex
+        flex-direction: column
+        &__text
+            order: -2
+            margin-bottom: 32px
+        &__img
+            margin-bottom: 30px
+    

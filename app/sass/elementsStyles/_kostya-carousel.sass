@@ -1,0 +1,43 @@
+.kostya-carousel
+    position: relative
+    width: 100%
+    margin-bottom: 50px
+    display: none
+    &__swiper
+        > .swiper-wrapper
+            position: relative
+            > .swiper-slide
+                width: 100%
+                position: relative
+                > img
+                    width: 100%
+    &__pagination
+        > .swiper-pagination-bullet-active
+            background-color: $purple
+        > .swiper-pagination-bullet
+            background-color: $purple
+    @media screen and ( max-width: 769px)
+        display: block
+    @media screen and ( max-width: 425px)
+        margin-bottom: 42px
+
+.kostya-carousel__swiper-button
+    &-next
+        background-image: url('../img/amsterdam01/next.svg')
+        right: 10px
+    &-prev
+        background-image: url('../img/amsterdam01/prev.svg')
+        left: 10px
+    &-prev, &-next
+        background-size: 100%
+        width: 15px
+        height: 25px
+        display: inline-flex
+        position: absolute
+        top: 50%
+        z-index: 999
+
+.kostya-coalge
+    @media screen and ( max-width: 769px )
+        display: none
+        

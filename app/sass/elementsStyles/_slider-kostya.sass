@@ -1,0 +1,147 @@
+// 9B51E0
+.slider-wrapper
+    display: flex
+    flex-wrap: nowrap
+
+.slide
+    width: 330px
+    height: 480px
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+    transition: background 1s ease
+.slide__0
+    background-image: url(/img/minsk/prej-obraz-1.png)
+.slide__1
+    background-image: url(/img/minsk/prej-obraz-2.png)
+.slide__2
+    background-image: url(/img/minsk/prej-obraz-3.png)
+
+.controls
+    position: relative
+    flex-grow: 1
+
+.togglers
+    display: flex
+    flex-wrap: nowrap
+    justify-content: space-between
+
+    height: 100%
+
+.kostya-slide
+    cursor: pointer
+    width: 100%
+    max-width: 200px
+    min-height: 340px
+    padding: 6px
+
+.kostya-slide__heading
+    font-family: 'firenight', sans-serif
+    font-size: 24px
+    text-align: center
+    font-weight: 500
+    margin-top: 10px
+    margin-bottom: 15px
+
+.kostya-slide__list li
+    font-family: 'firenight', sans-serif
+    display: flex
+    align-items: start
+    font-size: 18px
+    margin: 8px 0
+
+.kostya-slide__list img
+    margin-right: 10px
+    min-width: 17px
+    height: 17px
+    margin-top: 3px
+
+.slick-current .kostya-slide__heading,
+.kostya-slide:hover .kostya-slide__heading
+    color: #9B51E0
+
+.cstm-arrow
+    position: absolute
+    z-index: 100
+    top: 50%
+
+    width: 30px
+    height: 30px
+
+    display: none
+    cursor: pointer
+    background-size: 100%
+    background-position: contain
+    transform: translateY(-50%)
+    &-next
+        right: 0%
+        background-image: url(/img/minsk/next.svg)
+    &-prev
+        left: 0%
+        background-image: url(/img/minsk/back.svg)
+
+@media ( max-width: 1000px )
+    .slide
+        width: 330px
+        height: 480px
+
+    .controls
+        padding: 0 30px
+
+    .kostya-slide
+        display: none
+        padding: 0
+        max-width: 280px
+        min-height: 400px
+
+    .slick-current.kostya-slide
+        display: block
+
+    .togglers
+        justify-content: center
+
+    .cstm-arrow
+        display: block
+
+@media ( max-width: 800px)
+    .togglers
+        align-items: center
+
+    .kostya-slide
+        width: 200px
+        min-height: 200px
+
+    .kostya-slide__heading
+        font-size: 18px
+
+    .kostya-slide__list li
+        font-size: 16px
+
+@media ( max-width: 500px )
+    .slider-wrapper
+        flex-direction: column
+
+    .slide
+        width: 100%
+        max-height: 330px
+        margin: 0 auto
+
+    .kostya-slide__img
+        display: none
+
+    .kostya-slide
+        min-height: 200px
+
+    .kostya-slide__heading
+        font-size: 24px
+
+    .kostya-slide__list li
+        font-size: 18px
+
+    .controls
+        max-width: 300px
+        margin: 0 auto
+        width: 100%
+
+    .cstm-arrow
+        top: 0

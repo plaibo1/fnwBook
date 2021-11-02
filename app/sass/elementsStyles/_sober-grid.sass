@@ -1,0 +1,44 @@
+.sober-grid
+    display: grid
+    grid-column-gap: 40px
+    grid-template-columns: 3fr 1fr
+    &__img
+        grid-row: 1/3
+        grid-column: 2/2
+    &__box
+        width: 80%
+        justify-self: end
+    &__text
+        margin-bottom: 50px
+
+@media screen and ( max-width: 1024px )
+    .sober-grid
+        grid-template-columns: 2.5fr 1fr
+        &__box
+            grid-column: 1/3
+            justify-self: center
+        &__text
+            margin-bottom: 0
+            align-self: center
+        &__img
+            grid-row: 1/2
+            margin-bottom: 50px
+
+@media screen and ( max-width: 1023px )
+    .sober-grid
+        grid-template-columns: 2fr 1fr
+        &__box
+            margin-top: 50px
+        &__text
+        &__img
+            margin-bottom: 0
+            align-self: center
+    
+@media screen and ( max-width: 767px )
+    .sober-grid
+        display: flex
+        flex-direction: column
+        &__box
+            width: 100%
+        &__text
+            margin-bottom: 32px

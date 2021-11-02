@@ -1,0 +1,24 @@
+.bashnya-grid
+    display: grid
+    grid-template-columns: 309px 454px
+    grid-column-gap: 32px
+
+    &__text2
+        grid-column: 2/3
+    &__img
+        grid-row: 1/4
+
+@media screen and ( max-width: 921px )
+    .bashnya-grid
+        grid-template-columns: 285px 382px
+        &__img
+            align-self: center
+    
+@media screen and ( max-width: 767px )
+    .bashnya-grid
+        display: flex
+        flex-direction: column
+        &__text1
+            order: -1
+        &__img
+            margin-bottom: 32px

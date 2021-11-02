@@ -1,0 +1,57 @@
+.box-2
+    width: 100%
+    position: relative
+    padding: 35px 40px
+    padding-left: 53px
+    padding-top: 50px
+    background-image: url('../img/comment-bg-sm.png')
+    background-repeat-y: no-repeat
+    display: flex
+    &__img
+        width: 60px
+        min-width: 60px
+        position: absolute
+        top: -27px
+        left: -20px
+        img
+            width: 100%
+            transform: rotate(-13deg)
+    &__text, &__text > p
+        font-family: 'Roboto', sans-serif
+        font-weight: 400
+        font-style: italic
+        line-height: 23px
+        color: #fff
+    &.yellow
+        background-image: url('../img/comment-bg-y-sm.png')
+        .box-2__img
+            width: 63px
+            height: 63px
+        .box-2__text, .box-2__text > p
+            color: #000
+            font-weight: 500
+
+@media screen and ( max-width: 425px )
+    .box-2
+        flex-direction: column
+        background-image: url('../img/comment-bg-sm.png')
+        background-repeat-x: repeat
+        border-top-left-radius: 10px
+        border-top-right-radius: 10px
+        padding: 30px
+        padding-top: 57px
+        padding-bottom: 25px
+        &__img
+            min-width: 50px
+            position: absolute
+            left: -20px
+            top: -15px
+        &.yellow
+            background-image: url('../img/comment-bg-y-sm.png')
+
+
+@media screen and ( max-width: 320px )
+    .box-2
+        padding: 35px 30px
+        padding-top: 45px
+    

@@ -1,0 +1,134 @@
+.city
+    width: 100%
+    position: relative
+    > img
+        width: 100%
+        transform: translateY(20px)
+    &.berlin > img
+        position: absolute
+        transform: translateY(-95%)
+    &.berlin
+        margin-top: 200px
+    &.mario
+        margin-top: 60px
+        z-index: 100
+    &.amsterdam03
+        margin-top: 70px
+    &.amsterdam-brussels
+
+    &.brussels-paris
+        // margin-top: 20px
+        overflow: hidden
+        img
+            @media screen and ( max-width: 768px )
+                width: 200%
+                transform: translateX(-10%) translateY(20px)
+    &.paris
+        margin-top: 480px
+        img
+            position: absolute
+            transform: translateY(-95%) rotateY(-180deg)
+            z-index: -1
+            @media screen and ( max-width: 1440px )
+                width: 105%
+                
+                
+        @media screen and ( max-width: 1440px )
+            margin-top: 371px
+        @media screen and ( max-width: 425px )
+            margin-top: 300px
+            
+            
+    &.paris-02
+        margin-top: -130px
+        img
+            transform: translateY(1.5px)
+        @media screen and ( max-width: 991px )
+            margin-top: 0
+
+    &.lyon-1
+        border-bottom: 1px solid #fff
+        img
+            transform: translateY(5px)
+            @media screen and ( max-width: 991px )
+                width: 120%
+                transform: translate(-6%, 5px)
+            @media screen and ( max-width: 425px )
+                width: 180%
+                transform: translate(-15%, 5px)
+                
+
+            
+                
+
+@media screen and (max-width: 1199px)
+    .city.paris
+        margin-top: 340px
+        img
+            width: 150%
+            transform: translateX(-16.5%) translateY(-95%) rotateY(-180deg)
+
+@media screen and (max-width: 991px)
+    .city.paris
+        margin-top: 290px
+        img
+            width: 160%
+            transform: translateX(-14.5%) translateY(-95%) rotateY(-180deg)
+
+
+@media screen and (max-width: 1024px)
+    .city
+        &.berlin
+            img
+                width: 150%
+                left: -13%
+
+
+@media screen and (max-width: 425px)
+    .city
+        &__xl
+            display: none !important
+        &__sm
+            display: block !important
+    .city.berlin img
+        width: 186%
+        transform: translateX(-9%) translateY(-95%)
+    .city.berlin
+        margin-top: 123px
+    .city.msk img
+        transform: translateX(-23%) translateY(20px)
+        width: 130%
+    .city.minsk
+        transform: scale(1.2) translateY(-12px) translateX(-3%)
+    .city.amsterdam1
+        margin-top: 20px
+    .city.hanover
+        img
+            width: 150%
+            transform: translateX(-31%) translateY(20px)
+    .city.amsterdam03
+        display: flex
+        justify-content: center
+        align-items: center
+        overflow: hidden
+        img
+            width: 200%
+    .city.amsterdam-brussels
+        img
+            width: 200%
+            transform: translateX(-42%) translateY(20px)
+    .city.paris
+        transform: translate(-5%, -95%)
+        margin-top: 59%
+        z-index: -1
+        img
+            width: 246% !important
+            transform: translateX(-17%) translateY(-95%) rotateY(-180deg)
+    
+
+@media screen and (min-width: 426px)
+    .city
+        &__xl
+            display: block !important
+        &__sm
+            display: none !important

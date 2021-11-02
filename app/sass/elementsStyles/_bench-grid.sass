@@ -1,0 +1,46 @@
+.bench-grid
+    display: grid
+    grid-template-columns: 1.5fr 2fr
+    grid-column-gap: 40px
+    &__dialog
+        grid-column: 2/3
+    &__img
+        grid-row: 1/3
+        align-self: end
+    &__text
+        margin-bottom: 32px
+        .box:nth-child(1)
+            margin-bottom: 50px !important
+            margin-top: 0 !important
+            width: 80%
+        .box:nth-child(2)
+            width: 50%
+            text-align: center
+            margin-bottom: 50px
+
+
+@media screen and ( max-width: 991px )
+    .bench-grid
+        grid-template-columns: 1.8fr 2fr
+        &__text
+            .box:nth-child(1)
+                width: 100%
+            .box:nth-child(2)
+                width: 80%
+        &__dialog
+            grid-column: 1/3
+        &__img
+            align-self: center
+
+@media screen and ( max-width: 767px )
+    .bench-grid
+        display: flex
+        flex-direction: column
+        &__text
+            order: -2
+            .box:nth-child(2)
+                margin-left: auto
+                width: 90%
+        &__img
+            margin-bottom: 25px
+        

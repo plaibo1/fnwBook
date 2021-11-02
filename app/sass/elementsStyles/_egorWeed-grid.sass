@@ -1,0 +1,44 @@
+.egorWeed-grid
+    display: grid
+    grid-template-columns: 2.6fr 3fr
+    grid-column-gap: 32px
+    &__text2
+        grid-column: 2/3
+        .box
+            width: 80%
+    &__img
+        grid-row: 1/3
+
+@media screen and ( max-width: 1199px )
+    .egorWeed-grid
+        grid-template-columns: 1.4fr 3fr
+        &__text2
+            grid-column: 1/3
+            padding: 0 17%
+            .box
+                width: 100%
+        &__img
+    
+@media screen and ( max-width: 991px )
+    .egorWeed-grid
+        grid-template-columns: 2fr 3fr
+        &__text2
+            padding: 0
+            .box
+                width: 65.666667%
+                margin: 0 auto
+        &__img
+            align-self: center
+
+@media screen and ( max-width: 767px )
+    .egorWeed-grid
+        display: flex
+        flex-direction: column
+        &__img
+            margin-bottom: 32px
+
+@media screen and ( max-width: 575px )
+    .egorWeed-grid
+        &__text2
+            .box
+                width: 100%

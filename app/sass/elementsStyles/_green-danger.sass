@@ -1,0 +1,38 @@
+.green-danger
+    // transform: translateY(20px)
+    padding-bottom: 137px
+    &__fence
+        height: 60px
+        width: 200%
+        background-image: url("../img/amsterdam03/fencing.svg")
+        background-repeat: repeat-x
+        background-size: contain
+    &-rotateLeft
+        overflow: hidden
+        width: 100%
+        transform: rotate(-3deg)
+        position: absolute
+    &-rotateRight
+        overflow: hidden
+        width: 100%
+        transform: rotate(3deg)
+        position: absolute
+    
+@media screen and ( max-width: 991px )
+    .green-danger
+        &__fence
+            background-size: cover
+        &-rotateLeft
+            transform: rotate(-6deg)
+        &-rotateRight
+            transform: rotate(6deg)
+    
+@media screen and ( max-width: 425px )
+    .green-danger
+        padding-bottom: 110px
+        &__fence
+            height: 40px
+        &-rotateLeft
+            transform: rotate(-6deg)
+        &-rotateRight
+            transform: rotate(6deg)

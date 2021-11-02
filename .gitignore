@@ -1,0 +1,6 @@
+app/img-src
+dist
+node_modules
+package-lock.json
+app/img
+video

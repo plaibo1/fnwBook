@@ -1,0 +1,36 @@
+.pitt-grid
+    display: grid
+    grid-template-columns: 2fr .8fr
+    grid-column-gap: 52px
+    &__img
+        grid-row: 1/4
+        grid-column: 2/-1    
+    
+@media screen and ( max-width: 1199px )
+    .pitt-grid
+        grid-template-columns: 2fr 1.5fr
+        &__img
+            align-self: center
+
+@media screen and ( max-width: 991px )
+    .pitt-grid
+        grid-template-columns: 2fr 1.1fr
+        &__text2
+            grid-column: 1/-1
+        &__img
+            align-self: start
+    
+@media screen and ( max-width: 767px )
+    .pitt-grid
+        display: flex
+        flex-direction: column
+        &__text2
+            grid-column: 1/-1
+        &__img
+            align-self: start
+            margin-bottom: 50px
+
+@media screen and ( max-width: 425px )
+    .pitt-grid
+        &__img
+            margin-bottom: 42px

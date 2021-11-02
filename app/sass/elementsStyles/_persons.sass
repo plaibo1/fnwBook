@@ -1,0 +1,58 @@
+.persons
+    background-size: cover
+    padding: 15px
+    &-wrap
+        background-image: url('../img/bg-dots.png')
+        background-repeat: no-repeat
+        background-size: cover
+    &__img
+        position: relative
+        width: 150px
+        margin: 0 auto
+        margin-top: 20px
+        img
+            width: 100%
+        &.perj::before
+            position: absolute
+            content: ''
+            width: 90px
+            height: 180px
+            background-image: url('../img/egor-cartoon.png')
+            background-size: contain
+            background-repeat: no-repeat
+            right: -50px
+        &.kostya::before
+            position: absolute
+            content: ''
+            width: 90px
+            height: 180px
+            background-image: url('../img/kostya-cartoon.png')
+            background-size: contain
+            background-repeat: no-repeat
+            right: -50px
+    &__title
+        font-weight: 700
+        font-size: 14px
+        margin-top: 25px
+        margin-bottom: 10px
+        text-transform: uppercase
+    &__list
+        &__item
+            // font-weight: 500
+            line-height: 18.85px
+            font-size: 13px
+            margin-bottom: 3px
+            &::before
+                content: '—'
+                margin-right: 5px
+    .title-sm
+        line-height: 30px
+
+@media screen and ( max-width: 425px)
+    .persons
+        &-wrap
+            padding-top: 30px
+            padding-bottom: 30px
+    .main.preface
+        padding-top: 0
+    

@@ -1,0 +1,59 @@
+.starz-bg
+    background-image: url('../img/amsterdam02/stars.png')
+    background-size: 95%
+    background-position: center center
+    position: relative
+    width: 100%
+    &__prej
+        position: absolute
+        top: 0
+        right: 6%
+        width: 220px
+        height: 100%
+        &__lax
+            width: 100%
+            position: sticky
+            top: 0
+            img
+                width: 100%
+    &__kostya
+        position: absolute
+        top: 0
+        left: 4%
+        width: 220px
+        height: 100%
+        &__lax
+            width: 100%
+            position: sticky
+            top: 0
+            img
+                width: 100%
+
+@media screen and ( max-width: 1024px )
+    .starz-bg
+        background-size: contain
+        &__prej, &__kostya
+            width: 150px
+
+@media screen and ( max-width: 768px )
+    .starz-bg
+        &__prej, &__kostya
+            width: 130px
+        &__prej
+            right: 3%
+        &__kostya
+            left: 1%
+
+@media screen and ( max-width: 575px )
+    .mario-text
+        padding-top: 90vh !important
+
+    .starz-bg
+        background-image: url('../img/amsterdam02/starz-sm.png')
+        background-size: cover
+        &__prej, &__kostya
+            width: 130px
+        &__prej
+            right: 5%
+        &__kostya
+            left: 5%

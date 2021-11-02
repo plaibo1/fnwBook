@@ -1,0 +1,23 @@
+.moscow-header
+    padding-top: 10px
+    // padding-bottom: 50px
+    // overflow: hidden
+    &__text
+        padding: 50px 0
+
+.stop-line-top-wrapper
+    transform: rotate(1deg)
+.stop-line-bot-wrapper
+    transform: rotate(-1.5deg)
+
+.stop-line, .stop-line-left
+    width: 100%
+    height: 25px
+    background-image: url('../img/moscow/stop-line.png')
+    background-size: contain
+    background-repeat: repeat-x
+
+@media ( max-width: 425px )
+    .stop-line-top-wrapper, .stop-line-bot-wrapper
+        transform: rotate(0deg)
+    

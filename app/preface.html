@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/plugins/bootstrap-grid.css">
+	<link rel="stylesheet" href="./css/main.css">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="./img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="./img/favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#603cba">
+	<meta name="msapplication-config" content="./img/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+	
+
+	<!-- nav -->
+	<nav class="nav">
+		<div class="container">
+			<div class="d-flex justify-content-between">
+				<div class="nav__logo"><img src="img/logo.svg" alt="img"></div>
+				<div class="nav__burger" id="burger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+
+		<!-- <div class="menu">
+
+			<div class="menu__header">
+				<img src="img/logo.svg"	alt="img" class="menu__header__logo">
+				<div class="menu__header__close">x</div>
+			</div>
+
+			<div class="menu-main">
+
+				<div class="menu__countries">
+
+					<a href='/' class="menu__countries__title">
+						Оглавление
+					</a>
+
+					<a href='./preface.html' class="menu__countries__title">
+						Предисловие
+					</a>
+
+					<div class="menu__countries__item">
+
+						<img src="img/countries/RUS.svg" alt="img" class="menu__countries__item__img">
+
+						<div class="menu__countries__item__links">
+							<a href='./moscow.html' class="menu__countries__item">Москва</a>
+							<a href='./moscow-minsk.html' class="menu__countries__item">Москва-Минск</a>
+						</div>
+
+					</div>
+
+					<div class="menu__countries__item">
+
+						<img src="img/countries/BLR.svg" alt="img" class="menu__countries__item__img">
+
+						<div class="menu__countries__item__links">
+							<a href='./minsk.html' class="menu__countries__item">Минск</a>
+							<a href='./minsk-warsawa.html' class="menu__countries__item">Минск-Варшава</a>
+						</div>
+
+					</div>
+
+					<div class="menu__countries__item">
+
+						<img src="img/countries/POL.svg" alt="img" class="menu__countries__item__img">
+
+						<div class="menu__countries__item__links">
+							<a href='./warsawa.html' class="menu__countries__item">Варшава</a>
+							<a href='./moscow-minsk.html' class="menu__countries__item">Варшава-Берлин</a>
+						</div>
+
+					</div>
+
+					<div class="menu__countries__item">
+
+						<img src="img/countries/DEO-white.png" alt="img" class="menu__countries__item__img">
+
+						<div class="menu__countries__item__links">
+							<a href='./moscow.html' class="menu__countries__item">Берлин</a>
+							<a href='./moscow-minsk.html' class="menu__countries__item">Берлин-Ганновер</a>
+						</div>
+
+					</div>
+
+					<div class="menu__countries__item">
+
+						<img src="img/countries/DEO-white.png" alt="img" class="menu__countries__item__img">
+
+						<div class="menu__countries__item__links">
+							<a href='./moscow.html' class="menu__countries__item">Ганновер</a>
+						</div>
+
+					</div>
+
+					<div class="menu__countries__item">
+
+						<img src="img/countries/NLD.svg" alt="img" class="menu__countries__item__img">
+
+						<div class="menu__countries__item__links">
+							<a href='./amsterdam-01.html' class="menu__countries__item">Амстердам #1</a>
+							<a href='./amsterdam-02.html' class="menu__countries__item">Амстердам #2</a>
+							<a href='./amsterdam-03.html' class="menu__countries__item">Амстердам #3</a>
+							<a href='./amsterdam-brussels.html' class="menu__countries__item">Амстердам-Брюссель</a>
+						</div>
+
+					</div>
+
+					<div class="menu__countries__item">
+
+						<img src="img/countries/BEL-no.svg" alt="img" class="menu__countries__item__img">
+
+						<div class="menu__countries__item__links">
+							<a href='./moscow.html' class="menu__countries__item">Брюссель</a>
+							<a href='./moscow-minsk.html' class="menu__countries__item">Брюссель-Париж</a>
+						</div>
+
+					</div>
+
+					<div class="menu__countries__item">
+
+						<img src="img/countries/FRA-no.svg" alt="img" class="menu__countries__item__img">
+
+						<div class="menu__countries__item__links">
+							<a href='./paris-01.html' class="menu__countries__item">Париж #1</a>
+							<a href='./paris-02.html' class="menu__countries__item">Париж #2</a>
+						</div>
+
+					</div>
+
+					<div class="menu__countries__item">
+
+						<img src="img/countries/FRA-no.svg" alt="img" class="menu__countries__item__img">
+
+						<div class="menu__countries__item__links">
+							<a href='./lyon-01.html' class="menu__countries__item">Лион #1</a>
+							<a href='./lyon-02.html' class="menu__countries__item">Лион #2</a>
+							<a href='./lyon-grenoble.html' class="menu__countries__item">Лион-Гренобль</a>
+							<a href='./grenoble-marseilles.html' class="menu__countries__item">Гренобль-Марсель</a>
+							<a href='./marseilles.html' class="menu__countries__item">Марсель</a>
+							<a href='./marseilles.html' class="menu__countries__item">Марсель-Ницца</a>
+							<a href='./marseilles.html' class="menu__countries__item">Ницца - Сан-Ремо</a>
+						</div>
+
+					</div>
+
+				</div>
+				
+				<div class="menu__authors">
+					<div class="menu__authors__title">Авторы:</div>
+	
+					<div class="menu__authors__box">
+
+						<div class="menu__authors__box__face">
+							<img src="img/perj-yellow.png" alt="img">
+						</div>
+
+						<div class="menu__authors__box__name">Преж</div>
+
+						<div class="menu__authors__box__socialmedia">
+
+							<div class="menu__authors__box__socialmedia__icon">
+								inst
+							</div>
+
+							<div class="menu__authors__box__socialmedia__icon">
+								face
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="menu__authors__box">
+						
+						<div class="menu__authors__box__face">
+							<img src="img/kostya-purple.png" alt="img">
+						</div>
+
+						<div class="menu__authors__box__name">Костэн</div>
+
+						<div class="menu__authors__box__socialmedia">
+
+							<div class="menu__authors__box__socialmedia__icon">
+								inst
+							</div>
+
+							<div class="menu__authors__box__socialmedia__icon">
+								face
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div> -->
+
+	</nav>
+	<!-- /nav -->
+
+<div class="main preface">
+	<!-- hide lg -->
+	<div class="container hide-desktop mb-xl">
+		<div class="row d-flex justify-content-center">
+			<!-- persons -->
+			<div class="col-12 col-md-6 col-lg-3 persons-wrap">
+				<div class="persons">
+					<h2 class="title-sm text-center">Действующие  лица:</h2>
+					<div class="persons__img perj">
+						<img src="img/pasport-bg-yellow.png" alt="img">
+					</div>
+					<div class="persons__title text-center">Егор Преженцев, он же Преж:</div>
+					<ul class="persons__list">
+						<li class="persons__list__item">родился в Бирюлёво;</li>
+						<li class="persons__list__item">выгнали из двух школ за попытки загрызть одноклассников;</li>
+						<li class="persons__list__item">познакомился с Костэном на баскетболе;</li>
+						<li class="persons__list__item">мечтает сделать тревел-версию кастингов Вудмана.</li>
+					</ul>
+				</div>
+
+				<div class="persons">
+					<div class="persons__img kostya">
+						<img src="img/pasport-bg-purple.png" alt="img">
+					</div>
+					<div class="persons__title text-center">Костя Ануров, он же Костэн:</div>
+					<ul class="persons__list">
+						<li class="persons__list__item">родился на Киевском вокзале;</li>
+						<li class="persons__list__item">потерял девственность раньше последнего молочного зуба;</li>
+						<li class="persons__list__item">играя с Прежем в одной команде, 2 года не мог запомнить его имя;</li>
+						<li class="persons__list__item">пропагандирует сахарно-сигаретную диету.</li>
+					</ul>
+				</div>
+			</div>
+			<!-- /persons -->
+		</div>
+	</div>
+	<!-- /hide lg -->
+
+	<!-- enter -->
+	<div class="container">
+		
+		<!-- row start -->
+		<div class="row custom-p d-flex justify-content-center">
+			<div class="col-lg-8">
+				<h1 class="title text-center mb-5 pb-5">Предисловие</h1>
+				<p class="pt-5 mt-5">
+					Почти два года назад я и мой друг Преж совершили поступок, 
+					который останется с нами до конца наших дней. 
+					Прозвучало так, будто мы кого-то убили, да? 
+					Хо-хо-мля, вот это был бы сюжет для книги! 
+					К сожалению или к счастью, тут немного другая история. 
+					Однажды вечером, без какого-либо вступления, 
+					вышеупомянутый товарищ написал мне:
+				</p>
+			</div>
+		</div>
+		<!-- row end -->
+
+	</div>
+	<!-- /enter -->
+
+	<!-- dialog and persons -->
+	<div class="container mt-xl">
+		<!-- row start -->
+		<div class="row custom-p d-flex justify-content-center align-items-center mt-5">
+
+			<!-- dialog -->
+			<div class="col-12 col-lg-5">
+				<div class="dialog">
+		
+					<!-- header -->
+					<div class="dialog__header">
+						<div class="dialog__header__back">
+							<img src="img/arrowBack.svg" alt="back">
+							<span>Назад</span>
+						</div>
+						<div class="dialog__header__name">
+							<span class="dialog__header__name__nickname">Егор Преженцев</span>
+							<span class="dialog__header__name__status">online</span>
+						</div>
+						<div class="dialog__header__avatar">
+							<img class="dialog__header__avatar__dots" src="img/3dots.svg" alt="img">
+							<img class="dialog__header__avatar__img" src="img/perj-yellow.png" alt="perj">
+						</div>
+					</div>
+					<!-- header -->
+		
+					<!-- message -->
+					<div class="dialog__message">
+						<div class="dialog__message__head">
+							<img class="dialog__message__head__avatar" src="img/perj-yellow.png" alt="perj">
+							<div class="dialog__message__head__name">Егор Преженцев</div>
+							<div class="dialog__message__head__time">19:52</div>
+						</div>
+						<div class="dialog__message__text">
+							Короче, напишу это тебе, Костэн. С того момента как мы не попали в сша, я брежу этой идеей, но если
+							смотреть правде в глаза,
+							по финансам она мне не светит еще лет 10. Я бы засунул свои хотелки в жопу и забыл про всё, если бы
+							не следующие обстоятельства.
+							Читая про чехию, наткнулся на различных путешественников, которые перемещаются по странам европы и
+							америки автостопом, ночуют на
+							заправках, спят в палатках, а подвозят их дальнобойщики и прочие личности. Затем я увидел такой
+							канал на русском ютубе.
+							Позже, в колледже, я познакомился с одной путешественницей. Она рассказала про автостоп и
+							путешествия без денег, как их подвозили
+							различные люди забесплатно, и они спали на заправках. Поначалу всё это мне казалось безумием, мол,
+							так невозможно.
+							Но как только я встретил человека своего возраста, который путешествует по России так, я понял: а
+							почему бы мне не попробовать
+							это сделать за ее пределами? Конечно, я подумал сразу об америке. Получить визы, взять билеты на
+							самолет, допустим, летом, и
+							на весь август улететь туда. И мотаться там свободно по стране, вписываясь к случайным людям.
+						</div>
+					</div>
+					<!-- /message -->
+
+					<!-- message -->
+					<div class="dialog__message">
+						<div class="dialog__message__head">
+							<img class="dialog__message__head__avatar" src="img/kostya-purple.png" alt="perj">
+							<div class="dialog__message__head__name">Костэн Ануров</div>
+							<div class="dialog__message__head__time">19:54</div>
+						</div>
+						<div class="dialog__message__text">
+							<div class="typing">
+								печатает<span>.</span><span>.</span><span>.</span>
+							</div>
+						</div>
+					</div>
+					<!-- /message -->
+
+					<!-- message -->
+					<div class="dialog__message">
+						<div class="dialog__message__head">
+							<img class="dialog__message__head__avatar" src="img/perj-yellow.png" alt="perj">
+							<div class="dialog__message__head__name">Егор Преженцев</div>
+							<div class="dialog__message__head__time">19:57</div>
+						</div>
+						<div class="dialog__message__text">
+							Погоди, дай мне закончить. Не отвечай. <br>
+							Можно поехать туда, имея только два рюкзака с палатками, несколько сотен баксов для экстренного случая и билет в другую сторону.
+							Из этого мог бы получиться крутой проект!!!
+							Но я понял, что опыта путешествия автостопом у меня нет, и будет глупо нахрапом пытаться покорить штаты. Поэтому думаю этим летом, пока виза открыта, попробовать это сделать сначала в Европе.
+							Она и ближе, и расстояния там не такие большие. А через год нацелиться на Америку.
+							Чересчур безумно?
+						</div>
+					</div>
+					<!-- /message -->
+		
+				</div>
+			</div>
+			<!-- /dialog -->
+
+			<!-- persons -->
+			<div class="col-12 ml-preface-persons col-lg-4 hide-mobile persons-wrap">
+				<div class="persons">
+					<h2 class="title-sm text-center">Действующие  лица:</h2>
+					<div class="persons__img perj">
+						<img src="img/pasport-bg-yellow.png" alt="img">
+					</div>
+					<div class="persons__title text-center">Егор Преженцев, он же Преж:</div>
+					<ul class="persons__list">
+						<li class="persons__list__item">родился в Бирюлёво;</li>
+						<li class="persons__list__item">выгнали из двух школ за попытки загрызть одноклассников;</li>
+						<li class="persons__list__item">познакомился с Костэном на баскетболе;</li>
+						<li class="persons__list__item">мечтает сделать тревел-версию кастингов Вудмана.</li>
+					</ul>
+				</div>
+
+				<div class="persons">
+					<div class="persons__img kostya">
+						<img src="img/pasport-bg-purple.png" alt="img">
+					</div>
+					<div class="persons__title text-center">Костя Ануров, он же Костэн:</div>
+					<ul class="persons__list">
+						<li class="persons__list__item">родился на Киевском вокзале;</li>
+						<li class="persons__list__item">потерял девственность раньше последнего молочного зуба;</li>
+						<li class="persons__list__item">играя с Прежем в одной команде, 2 года не мог запомнить его имя;</li>
+						<li class="persons__list__item">пропагандирует сахарно-сигаретную диету.</li>
+					</ul>
+				</div>
+			</div>
+			<!-- /persons -->
+
+		</div>
+		<!-- row end -->
+	</div>
+	<!-- /dialog and presons -->
+
+	<!-- king-kong -->
+	<div class="container mt-xl">
+		
+		<!-- row start -->
+		<div class="row custom-p d-flex justify-content-center">
+			<div class="col-lg-8">
+				<p class="mb-xl">
+					Тогда, сидя перед монитором компьютера, я понял всё. Мой друг однозначно был прав: 
+					это чёртово безумие. Особенно если учитывать наши непростые характеры и вспыльчивые нравы. 
+					Пустить нас в Европу — всё равно что привезти Кинг Конга в Нью-Йорк: 
+					сплошные массовые разрушения, 
+					куча случайных смертей и практически полное отсутствие положительных героев. 
+				</p>
+			</div>
+			<div class="col-lg-8">
+				<div class="img mb-xl">
+					<div class="king-kong">
+						<img class="" src="img/king-test.png" alt="king-kong">
+						<img class="lax lax_preset_zigzag:100:36" src="img/king-kong-nobg.png" alt="king-kong">
+					</div>
+					
+				</div>
+			</div>
+			<div class="col-lg-8 mb-xl">
+				<p>
+					И да, не забудь про гибель обезьянки (олицетворяющей нас) в конце фильма. 
+					Взвесив сложившуюся ситуацию за сигареткой, я принял единственное верное решение. 
+					Оно стало причиной следующих нескольких сообщений:
+				</p>
+			</div>
+		</div>
+		<!-- row end -->
+
+	</div>
+	<!-- /king-kong -->
+
+	<!-- dialog -->
+	<div class="container mt-xl mb-xl">
+		<div class="row custom-p d-flex justify-content-center">
+			<div class="col-12 col-lg-6">
+				<div class="dialog">
+		
+					<!-- header -->
+					<div class="dialog__header">
+						<div class="dialog__header__back">
+							<img src="img/arrowBack.svg" alt="back">
+							<span>Назад</span>
+						</div>
+						<div class="dialog__header__name">
+							<span class="dialog__header__name__nickname">Егор Преженцев</span>
+							<span class="dialog__header__name__status">online</span>
+						</div>
+						<div class="dialog__header__avatar">
+							<img class="dialog__header__avatar__dots" src="img/3dots.svg" alt="img">
+							<img class="dialog__header__avatar__img" src="img/perj-yellow.png" alt="perj">
+						</div>
+					</div>
+					<!-- header -->
+		
+					<!-- message -->
+					<div class="dialog__message">
+						<div class="dialog__message__head">
+							<img class="dialog__message__head__avatar" src="img/kostya-purple.png" alt="perj">
+							<div class="dialog__message__head__name">Костэн Ануров</div>
+							<div class="dialog__message__head__time">19:58</div>
+						</div>
+						<div class="dialog__message__text">
+							Бля, такое ощущение, что потеряв интерес к колледжу и не горя желанием найти работу, ты просто решил побыстрее сдохнуть.
+						</div>
+					</div>
+					<!-- /message -->
+		
+					<!-- message -->
+					<div class="dialog__message">
+						<div class="dialog__message__head">
+							<img class="dialog__message__head__avatar" src="img/perj-yellow.png" alt="perj">
+							<div class="dialog__message__head__name">Егор Преженцев</div>
+							<div class="dialog__message__head__time">19:58</div>
+						</div>
+						<div class="dialog__message__text">
+							Да?
+						</div>
+					</div>
+					<!-- /message -->
+		
+					<!-- message -->
+					<div class="dialog__message">
+						<div class="dialog__message__head">
+							<img class="dialog__message__head__avatar" src="img/kostya-purple.png" alt="perj">
+							<div class="dialog__message__head__name">Костэн Ануров</div>
+							<div class="dialog__message__head__time">19:58</div>
+						</div>
+						<div class="dialog__message__text">
+							Ну так
+						</div>
+					</div>
+					<!-- /message -->
+		
+					<!-- message -->
+					<div class="dialog__message">
+						<div class="dialog__message__head">
+							<img class="dialog__message__head__avatar" src="img/perj-yellow.png" alt="perj">
+							<div class="dialog__message__head__name">Егор Преженцев</div>
+							<div class="dialog__message__head__time">19:59</div>
+						</div>
+						<div class="dialog__message__text">
+							Ну… возможно, кстати.
+						</div>
+					</div>
+					<!-- /message -->
+		
+					<!-- message -->
+					<div class="dialog__message">
+						<div class="dialog__message__head">
+							<img class="dialog__message__head__avatar" src="img/kostya-purple.png" alt="perj">
+							<div class="dialog__message__head__name">Костэн Ануров</div>
+							<div class="dialog__message__head__time">19:58</div>
+						</div>
+						<div class="dialog__message__text">
+							Мне нравится. Погнали.
+						</div>
+					</div>
+					<!-- /message -->
+		
+					<!-- message -->
+					<div class="dialog__message">
+						<div class="dialog__message__head">
+							<img class="dialog__message__head__avatar" src="img/perj-yellow.png" alt="perj">
+							<div class="dialog__message__head__name">Егор Преженцев</div>
+							<div class="dialog__message__head__time">19:59</div>
+						</div>
+						<div class="dialog__message__text">
+							Ахахахаха
+						</div>
+					</div>
+					<!-- /message -->
+		
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /dialog -->
+
+	<!-- handsmash -->
+	<div class="handsmash">
+		<div class="handsmash-circleWrap">
+			<div class="handsmash__wrap">
+				<div class="handsmash__wrap__leftHand"><img src="img/left-hand.png" alt="img"></div>
+				<div class="handsmash__wrap__rightHand"><img src="img/right-hand.png" alt="img"></div>
+				<div class="handsmash-circleWrap__circle"></div>
+			</div>
+		</div>
+		<div class="handsmash__height"></div>
+	</div>
+	<!-- /handsmash -->
+
+	<!-- <div class="handsmash__height-dark"></div> -->
+
+
+	
+		<!-- text -->
+		<div class="container">
+	
+			<!-- row start -->
+			<div class="row custom-p d-flex justify-content-center">
+				<div class="col-lg-8">
+					<p class="pt-5 mt-5">
+						То, что случилось дальше, — уже история, обрывки которой до сих пор всплывают то тут, то там.
+						Но чтобы рассказать ее полностью, потребовался бы ящик виски и не одна ночная посиделка на кухне.
+						Именно поэтому мы и решили создать эту книгу.
+						Большая часть заметок писалась во время путешествия. Куча письменных примечаний на телефоне,
+						расшифрованные записи с диктофона — всё это было переработано и соединено в печатный текст, который
+						ты видишь перед собой.
+					</p>
+					<p class="pt-5 mt-5">
+						Когда я перечитываю сие творение сейчас, очень хочется переделать каждое сраное слово. Но это было
+						бы неправильно: мысли,
+						образы, эмоции тех времен неразрывно связаны с приключениями, выпавшими на нашу долю. Здесь много
+						мата, непонятных отступлений
+						и несвязных словесных конструкций. И, само собой, найдутся те, кому это покажется излишним. В свое
+						оправдание скажу лишь,
+						что порой искренность важнее лаконичности и приличий.
+					</p>
+					<p class="d-flex justify-content-end text-center pt-5 no-format">
+						Ануров Константин <br> 31 марта 2018 года
+					</p>
+				</div>
+			</div>
+			<!-- row end -->
+	
+		</div>
+		<!-- /text -->
+	
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="col-lg-8">
+					<div class="col-sm-6 col-lg-7 ml-auto">
+						<div class="img bag"><img src="img/bag.png" alt="bag"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="container">
+			<div class="row custom-p d-flex justify-content-center">
+				<div class="col-lg-8">
+					<div class="box no-mb-mt">
+						<div class="box__img"><img src="img/perj-face.png" alt="perj"></div>
+						<div class="box__text">
+							Костэну свойственно приукрашивать действительность, собственно, из-за этого я его и пригласил:
+							народ требует хлеба и зрелищ.
+							Так что я ответственен за хлеб, а мой компаньон — за всю эмоциональную составляющую. Кроме
+							шуток, это путешествие обесценило следующие поездки.
+							Трип получился слишком насыщенным, и теперь трудно испытать подобные эмоции снова. Прям как с
+							наркотиками… или нет?
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	
+		<footer>
+			<div class="container">
+				<div class="row d-flex justify-content-center">
+					<div class="col-12 col-lg-10">
+						<div class="map">
+							<div class="map__marker"><img src="img/mapMarker.png" alt="marker"></div>
+							<div class="map__border">
+								<div class="map__border__solid"></div>
+							</div>
+							<div class="map__flag">
+								<img src="img/countries/RUS.svg" alt="MSK">
+								<span>Москва</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+
+
+<!-- <div class="main">
+	
+</div> -->
+
+
+</body>
+
+	<script src="js/plugins/SmoothScroll.js"></script>
+	<script src="js/plugins/lax.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/preface.js"></script>
+</body>
+</html>

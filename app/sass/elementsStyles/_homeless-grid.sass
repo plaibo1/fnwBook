@@ -1,0 +1,44 @@
+.homeless-grid
+    display: grid
+    grid-template-columns: 3fr 2fr
+    grid-column-gap: 40px
+    &__img
+        grid-row: 1/4
+        grid-column: 2/3
+        img
+            transform: translateY(-13%)
+            position: absolute
+
+@media screen and ( max-width: 1199px )
+    .homeless-grid
+        &__img
+            img
+                transform: none
+
+@media screen and ( max-width: 991px )
+    .homeless-grid
+        &__img
+            grid-row: 2/5
+            img
+                width: 130% !important
+                margin-left: -30px
+        &__text1
+            grid-column: 1/3
+
+@media screen and ( max-width: 767px )
+    .homeless-grid
+        display: flex
+        flex-direction: column
+        align-items: center
+        &__img
+            img
+                width: 100% !important
+
+@media screen and ( max-width: 767px )
+    .homeless-grid
+        &__img
+            margin-bottom: 10px
+            img
+                width: 90% !important
+                margin-left: 0
+                position: static

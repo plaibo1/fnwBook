@@ -1,0 +1,59 @@
+.amsterdam-02-header
+    background-image: url('../img/amsterdam02/vessels.jpg')
+    padding-bottom: 60px
+    padding-top: 10px
+    background-size: 100% 100%
+    background-position: center center
+    animation: pulse 4s linear infinite
+    position: relative
+    &__overlay
+        // width: 100%
+        // height: 100%
+        // position: absolute
+        // background-color: #000
+        // left: 0
+        // top: 0
+        // animation: darkness 3.5s linear infinite
+
+
+.main.amsterdam-02
+    padding-top: 0
+
+.jackets
+    margin-top: -5px
+    overflow: hidden
+    display: flex
+    align-items: center
+    justify-content: center
+    img
+        width: 1920px
+        @media screen and ( min-width: 1921px )
+            width: 100%
+            
+
+@keyframes pulse
+    0%
+        background-size: 100% 100%
+        filter: blur(0)
+    50%
+        background-size: 113% 113%
+        filter: blur(0.5px)
+    100%
+        background-size: 100% 100%
+        filter: blur(0)
+
+// @keyframes darkness
+//     0%
+//         opacity: 0
+//     50%
+//         opacity: .3
+//     100%
+//         opacity: 0
+        
+
+@media screen and ( max-width: 768px )
+    .amsterdam-02-header
+        background-image: url('../img/amsterdam02/vesseles-tab.jpg')
+@media screen and ( max-width: 425px )
+    .amsterdam-02-header
+        background-image: url('../img/amsterdam02/vesseles-mob.jpg')

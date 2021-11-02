@@ -1,0 +1,52 @@
+.amIloveIt-grid
+    display: grid
+    grid-template-columns: 3fr 2.3fr
+    grid-column-gap: 30px
+    margin-top: -16%
+    &__text
+        align-self: end
+
+.ml-amIloveIt-auto
+    margin-left: auto
+
+@media screen and ( max-width: 1199px )
+    .amIloveIt-grid
+        margin-top: -14%
+        &__img
+            transform: translateY(-10%)
+    .ml-amIloveIt-auto
+        margin-left: 0
+
+@media screen and ( max-width: 991px )
+    .amIloveIt-grid
+        margin-top: -5%
+        &__img
+            transform: translateY(-36%) 
+    
+@media screen and ( max-width: 767px )
+    .amIloveIt-grid
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-top: -23%
+        &__img
+            transform: translateY(0%)
+            order: -1
+            margin-bottom: 32px
+            width: 80%
+
+@media screen and ( max-width: 575px )
+    .amIloveIt-grid
+        margin-top: -33%
+        &__img
+            width: 95%
+
+@media screen and ( max-width: 375px )
+    .amIloveIt-grid
+        margin-top: -37%
+        &__img
+            width: 100%
+    
+@media screen and ( max-width: 320px )
+    .amIloveIt-grid
+        margin-top: -43%

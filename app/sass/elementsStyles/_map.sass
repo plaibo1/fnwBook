@@ -1,0 +1,93 @@
+.map
+    width: 100%
+    padding: 50px 0
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    position: relative
+    &__marker
+        display: flex
+        align-items: center
+        position: relative
+        &.mashrooms
+            img
+                width: 32px
+        &.weed
+            img
+                width: 32px
+        &.bus
+            img
+                width: 51px
+                @media screen and ( max-width: 425px )
+                    width: 36px
+        &.gasoline
+            img
+                width: 40px
+                @media screen and ( max-width: 425px )
+                    width: 33px
+        img
+            width: 20px
+                    
+                    
+    &__border
+        width: 100%
+        position: relative
+        display: flex
+        align-items: center
+        margin: 15px 0
+        border-top: 5px #181818 dashed
+        border-radius: 10px
+        &__solid
+            width: 50%
+            height: 1px
+            border-top: 5px $yellow solid
+            position: absolute
+            left: 0
+            top: -5px
+            &__thumb
+                position: absolute
+                width: 16px
+                height: 16px
+                background-color: $yellow
+                right: 0
+                top: -11px
+                border-radius: 50%
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 50%
+                    top: 50%
+                    transform: translate(-50%, -50%)
+                    width: 8px
+                    height: 8px
+                    border-radius: 50%
+                    background-color:#070709
+        &.dark
+            border-top: 5px $text-white dashed
+    &__flag
+        display: flex
+        align-items: center
+        img
+            margin: 0 10px
+            width: 59px
+        span
+            font-size: 24px
+            font-family: 'firenight', sans-serif
+            font-weight: 500
+        &.dark
+            color: $text-white
+
+        &-wrap
+            width: 80%
+            display: flex
+            justify-content: space-between
+
+@media screen and (max-width: 425px)
+    .map
+        &__flag
+            span
+                font-size: 18px
+            img
+                width: 22px
+        padding-top: 40px

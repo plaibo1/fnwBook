@@ -1,0 +1,32 @@
+.openFullScreenImg
+    width: 100%
+    height: 100vh
+    position: fixed
+    display: flex
+    align-items: center
+    justify-content: center
+    z-index: 10000
+    left: 0
+    top: 0
+    transition: opacity .3s ease
+    &:before
+        content: ""
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        background-color: #000
+        opacity: 0.6
+        z-index: -1
+
+
+    img
+        animation: fadeFullScreenImg .4s ease
+        max-width: 95%
+
+@keyframes fadeFullScreenImg
+    0%
+        opacity: 0
+    100%
+        opacity: 1

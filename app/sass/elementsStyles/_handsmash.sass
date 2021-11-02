@@ -1,0 +1,56 @@
+.handsmash
+    position: relative
+    width: 100%
+    // padding: 50px 0
+    &__wrap
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 100%
+        &.fixed
+            position: fixed
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+
+        &__leftHand
+            width: 50%
+        &__rightHand
+            width: 50%
+        // &__leftHand, &__rightHand
+                
+        img
+            width: 100%
+            transform: scale(1.1)
+            @media screen and ( max-width: 1024px )
+                transform: scale(1.5)
+            @media screen and ( max-width: 768px )
+                transform: scale(2)
+   
+    &__height
+        height: 100vh
+        @media screen and ( max-width: 1440px )
+            height: 90vh
+        @media screen and ( max-width: 768px )
+            height: 85vh
+            
+    &-circleWrap
+        position: relative
+        &__circle
+            width: 300px
+            height: 300px
+            background-color: $yellow
+            border-radius: 50%
+            filter: blur(5px)
+            position: absolute
+            top: 30%
+            z-index: -1
+
+.yellowBlock
+    width: 300px
+    height: 300px
+    background: $yellow
+    border-radius: 50%
+    transition: all 1s ease
+    filter: blur(5px)
+    position: absolute
