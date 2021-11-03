@@ -1160,6 +1160,38 @@
     top: 103%
   }
 }
+.nimes-montpellier.img {
+  margin-top: 20px
+}
+@media screen and (max-width:767px) {
+  .nimes-montpellier.img {
+    margin-top: 41px
+  }
+}
+.wire-bg {
+  position: relative
+}
+.wire-bg__img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%)
+}
+.wire-bg__img:nth-child(2) {
+  -webkit-transform: translateY(-35%);
+  -ms-transform: translateY(-35%);
+  transform: translateY(-35%)
+}
+.wire-bg__img:nth-child(3) {
+  -webkit-transform: translateY(-65%);
+  -ms-transform: translateY(-65%);
+  transform: translateY(-65%)
+}
+.wire-bg__img img {
+  width: 100%
+}
 .text-center {
   text-align: center
 }
