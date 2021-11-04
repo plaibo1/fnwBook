@@ -1,0 +1,25 @@
+.nevskiy-grid
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-column-gap: 40px
+    @media screen and ( max-width: 767px )
+        display: flex
+        flex-direction: column
+        
+    &__box
+        grid-column: 2/3
+        grid-row: 5/10
+        align-self: center
+    &__img
+        grid-row: 1/10
+        align-self: center
+        @media screen and ( max-width: 767px )
+            margin-bottom: 41px
+    &__text
+        align-self: center
+        grid-row: 2/5
+        @media screen and ( max-width: 767px )
+            order: -2
+
+
+    
