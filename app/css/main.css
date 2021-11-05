@@ -1192,6 +1192,39 @@
 .wire-bg__img img {
   width: 100%
 }
+.box-2__text.egorGirone {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+[data-aos=girone-vs-1] {
+  opacity: 0;
+  -webkit-transform: translateX(-200%);
+  -ms-transform: translateX(-200%);
+  transform: translateX(-200%)
+}
+[data-aos=girone-vs-1].aos-animate {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1
+}
+[data-aos=girone-vs-2] {
+  opacity: 0;
+  -webkit-transform: translateX(200%);
+  -ms-transform: translateX(200%);
+  transform: translateX(200%)
+}
+[data-aos=girone-vs-2].aos-animate {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1
+}
 .text-center {
   text-align: center
 }
@@ -7814,6 +7847,9 @@ video {
   opacity: .6;
   z-index: 999
 }
+.pora-valit.header-girone-stamp.stamp::before {
+  opacity: .6
+}
 @-webkit-keyframes stamp {
   0% {
     -webkit-transform: scale(10) rotate(-25deg);
@@ -8573,5 +8609,35 @@ video {
     order: -3;
     margin-bottom: 20px;
     margin-top: -20px
+  }
+}
+.main.header-girone-main {
+  padding-top: 0!important
+}
+.header-girone {
+  background-image: url(../img/girone/girone.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 826px
+}
+@media screen and (max-width:1199px) {
+  .header-girone {
+    height: 725px
+  }
+}
+@media screen and (max-width:1024px) {
+  .header-girone {
+    height: 625px
+  }
+}
+@media screen and (max-width:991px) {
+  .header-girone {
+    height: 505px
+  }
+}
+@media screen and (max-width:576px) {
+  .header-girone {
+    height: 405px;
+    background-position: center center
   }
 }
