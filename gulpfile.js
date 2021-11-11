@@ -104,6 +104,7 @@ exports.styles = styles;
 exports.images = images;
 exports.images_gif = images_gif;
 exports.cleanimg = cleanimg;
+exports.mp4 = mp4;
 
 exports.default = parallel(styles, scripts, browsersync, startwatch);
 
