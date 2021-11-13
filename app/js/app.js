@@ -402,6 +402,10 @@ function createPreloader() {
     }
   };
 
+  const autoPlay = () => {
+    document.querySelectorAll('video[autoplay]').forEach(video => video.play());
+  }
+
   const event = new Event('pageUpdate');
 
   const update = (next) => {
@@ -428,6 +432,7 @@ function createPreloader() {
     nextScripts = [];
     hintRendered = false;
     remove(".scroll-icon__container");
+    autoPlay();
     enableLax();
     if (AOS && AOS.init) {
       AOS.init();

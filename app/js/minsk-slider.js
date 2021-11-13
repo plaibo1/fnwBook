@@ -34,9 +34,3 @@ function KostenSlider() {
 }
 
 KostenSlider();
-
-window.addEventListener("pageUpdate", function () {
-  if (window.location.pathname === "/minsk.html") {
-    document.querySelector("img video").play();
-  }
-});
