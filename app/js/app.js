@@ -261,7 +261,7 @@ const MENU_ITEMS = [
       { href: "/nice-sanremo.html", text: "Ницца - Сан-Ремо" },
       { href: "/sanremo.html", text: "Сан-Ремо" },
       { href: "/sanremo-monaco-cannes.html", text: "Сан-Ремо - Монако - Канны" },
-      { href: "/сannes-nimes.html", text: "Канны - Ним" },
+      { href: "/cannes-nimes.html", text: "Канны - Ним" },
     ],
   },
 ];
