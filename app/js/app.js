@@ -404,7 +404,15 @@ function createPreloader() {
 
   const autoPlay = () => {
     document.querySelectorAll('video[autoplay]').forEach(video => video.play());
-  }
+  };
+
+  const updateActiveLink = (href) => {
+    const current = document.querySelector(".menu__countries__item.active");
+    const next = document.querySelector(`a[href='${href}']`);
+
+    current && current.classList.remove('active');
+    next && next.classList.add('active');
+  };
 
   const event = new Event('pageUpdate');
 
@@ -415,6 +423,7 @@ function createPreloader() {
 
     if (nextPage) {
       document.body.appendChild(nextPage);
+      updateActiveLink(href);
       window.history.pushState(next, text, href);
     }
 
