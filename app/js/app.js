@@ -260,8 +260,8 @@ const MENU_ITEMS = [
       { href: "/marseilles-nice.html", text: "Марсель-Ницца" },
       { href: "/nice-sanremo.html", text: "Ницца - Сан-Ремо" },
       { href: "/sanremo.html", text: "Сан-Ремо" },
-      { href: "/sanremo-monaco-сannes.html", text: "Сан-Ремо - Монако - Канны" },
-      { href: "/сannes-nimes.html", text: "Канны - Ним" },
+      { href: "/sanremo-monaco-cannes.html", text: "Сан-Ремо - Монако - Канны" },
+      { href: "/cannes-nimes.html", text: "Канны - Ним" },
     ],
   },
 ];
@@ -356,6 +356,8 @@ function createPreloader() {
   const ARTICLES = MENU_ITEMS.reduce((acc, { links }) => acc.concat(links), []);
   const parser = new DOMParser();
 
+
+
   // flags
   let nextLoaded = false;
   let hintRendered = false;
@@ -364,10 +366,11 @@ function createPreloader() {
   let prev = scrollY;
   /** @type DocumentFragment */
   let nextPage;
+  let nextStyles = [];
   let nextScripts = [];
-  const loaded = Array.from(document.querySelectorAll("script")).map(
-    (el) => el.src
-  );
+
+  const loadedStyles = selectAll('link[rel="stylesheet"]').map(({href}) => href);
+  const loadedScripts = selectAll("script").map(({src}) => src);
 
   // funcs
   const showHint = () => {
@@ -389,17 +392,32 @@ function createPreloader() {
 
       nextPage = new DocumentFragment();
 
-      page //
-        .querySelectorAll("body > div")
-        .forEach((e) => nextPage.appendChild(e));
+      selectAll("body > div", page)
+        .forEach((e) => nextPage.appendChild(e))
 
-      nextScripts = Array.from(page.querySelectorAll("script"))
-        .filter((e) => !loaded.includes(e.src))
-        .map((e) => e.src);
+      nextScripts = selectAll('script', page)
+        .map(({src}) => src)
+        .filter(s => !loadedScripts.includes(s));
+
+      nextStyles = selectAll('link[rel="stylesheet"]', page)
+        .map(({href}) => href)
+        .filter(s => !loadedStyles.includes(s));
 
     } catch {
       nextLoaded = false;
     }
+  };
+
+  const autoPlay = () => {
+    document.querySelectorAll('video[autoplay]').forEach(video => video.play());
+  };
+
+  const updateActiveLink = (href) => {
+    const current = document.querySelector(".menu__countries__item.active");
+    const next = document.querySelector(`a[href='${href}']`);
+
+    current && current.classList.remove('active');
+    next && next.classList.add('active');
   };
 
   const event = new Event('pageUpdate');
@@ -411,23 +429,34 @@ function createPreloader() {
 
     if (nextPage) {
       document.body.appendChild(nextPage);
+      updateActiveLink(href);
       window.history.pushState(next, text, href);
     }
 
-    if (nextScripts.length) {
-      nextScripts.forEach((url) => {
-        const el = document.createElement("script");
-        el.src = url;
+    nextStyles.forEach(href => {
+      const el = document.createElement("link");
 
-        head.appendChild(el);
-      });
-    }
+      el.setAttribute("rel", "stylesheet");
+      el.setAttribute("href", href);
+      head.appendChild(el);
+      loadedStyles.push(href);
+    });
+
+    nextScripts.forEach((url) => {
+      const el = document.createElement("script");
+      el.setAttribute('src', url);
+
+      head.appendChild(el);
+      loadedScripts.push(url)
+    });
 
     nextPage = undefined;
     nextLoaded = false;
+    nextStyles = [];
     nextScripts = [];
     hintRendered = false;
     remove(".scroll-icon__container");
+    autoPlay();
     enableLax();
     if (AOS && AOS.init) {
       AOS.init();
@@ -577,4 +606,8 @@ function animate(timing, draw, duration) {
       requestAnimationFrame(animation);
     }
   });
+}
+
+function selectAll(selector, source = document) {
+  return Array.from(source.querySelectorAll(selector));
 }
