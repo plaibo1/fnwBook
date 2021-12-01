@@ -1,7 +1,16 @@
 // let a = 
-setTimeout(function(){
-    document.querySelector('.pora-valit').classList.add('stamp')
-}, 2000)
+function stampGo() {
+    setTimeout(function(){
+        document.querySelectorAll('.pora-valit').forEach(el => el.classList.add('stamp'))
+    }, 2000)
+}
+stampGo()
+
+
+window.addEventListener('pageUpdate', function() {
+    stampGo()
+    console.log('stamp on page update')
+})
 
 //     function test (foo, time) {
 //         let done = false;

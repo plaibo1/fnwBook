@@ -63,7 +63,7 @@ function enableLax() {
 function enableFullScreenForImages() {
   
   const fullScreenEnabled = new Set([
-    "img/example.png",
+    "img/marseilles-nice/pitt.png",
   ]);
 
   const images = Array.from(document.querySelectorAll("img"));
@@ -262,6 +262,17 @@ const MENU_ITEMS = [
       { href: "/sanremo.html", text: "Сан-Ремо" },
       { href: "/sanremo-monaco-cannes.html", text: "Сан-Ремо - Монако - Канны" },
       { href: "/cannes-nimes.html", text: "Канны - Ним" },
+      { href: "/nimes-nimes-montpellier.html", text: "Ним - Ним - Монпелье" },
+      { href: "/nimes-montpellier.html", text: "Ним - Монпелье" },
+      { href: "/montpellier-montpellier.html", text: "Монпелье - Монпелье" },
+      { href: "/montpellier-girone.html", text: "Монпелье - Жирона" },
+    ],
+  },
+  {
+    image: "img/countries/spain.svg",
+    links: [
+      { href: "/girone.html", text: "Жирона" },
+      { href: "/epilogue.html", text: "Эпилог" },
     ],
   },
 ];
@@ -356,8 +367,6 @@ function createPreloader() {
   const ARTICLES = MENU_ITEMS.reduce((acc, { links }) => acc.concat(links), []);
   const parser = new DOMParser();
 
-
-
   // flags
   let nextLoaded = false;
   let hintRendered = false;
@@ -388,12 +397,16 @@ function createPreloader() {
 
       const page = await fetch(href)
         .then((res) => res.text())
-        .then((txt) => parser.parseFromString(txt, "text/html"));
+        .then((txt) => parser.parseFromString(txt, "text/html"))
 
       nextPage = new DocumentFragment();
 
       selectAll("body > div", page)
-        .forEach((e) => nextPage.appendChild(e))
+        .forEach((e) => {
+          if(e.querySelector('.container .map') == null) return nextPage.appendChild(e)
+          if(e.classList.contains('main')) e.querySelector('.container .map').remove()
+          return nextPage.appendChild(e)
+        })
 
       nextScripts = selectAll('script', page)
         .map(({src}) => src)
@@ -512,7 +525,7 @@ function createPreloader() {
         }
       };
 
-      animate((t) => t, progressBarAnimation, 800);
+      animate((t) => t, progressBarAnimation, 1500);
     }
   };
 }

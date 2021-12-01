@@ -1231,6 +1231,14 @@
   font-size: 24px;
   margin-bottom: 50px
 }
+footer {
+  -webkit-transition: opacity .5s ease;
+  -o-transition: opacity .5s ease;
+  transition: opacity .5s ease
+}
+footer.hide {
+  opacity: 0
+}
 .text-center {
   text-align: center
 }
@@ -3508,8 +3516,11 @@ video {
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr
 }
-.tonus-grid__img {
-  width: 90%
+.tonus-grid__img .img {
+  width: 80%!important;
+  -webkit-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  transform: translateX(30px)
 }
 .tonus-grid__img .img img {
   position: absolute
@@ -3525,8 +3536,11 @@ video {
     -ms-grid-column-span: 2;
     grid-column: 1/3
   }
-  .tonus-grid__img {
-    width: 100%
+  .tonus-grid__img .img {
+    width: 80%!important;
+    -webkit-transform: translateX(30px) translateY(-20px);
+    -ms-transform: translateX(30px) translateY(-20px);
+    transform: translateX(30px) translateY(-20px)
   }
   .tonus-grid__img .img img {
     position: relative
@@ -3543,9 +3557,16 @@ video {
     -ms-grid-column-span: 2;
     grid-column: 1/3
   }
+  .tonus-grid__img .img {
+    width: 100%!important;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    margin-bottom: 32px
+  }
 }
 @media (max-width:425px) {
-  .tonus-grid__img {
+  .tonus-grid__img .img {
     margin-bottom: 24px
   }
 }
@@ -4433,10 +4454,32 @@ video {
   top: 0;
   left: 0;
   max-width: 260px;
-  text-align: center
+  text-align: center;
+  margin-bottom: -40px
+}
+@media screen and (max-width:487px) {
+  .disco__ball {
+    max-width: 200px
+  }
 }
 .disco__ball img {
   width: 100%
+}
+.disco__ball-wrap {
+  height: 120vh
+}
+@media screen and (max-width:425px) {
+  .disco__ball-wrap {
+    height: 100vh
+  }
+}
+.disco__hands {
+  margin-top: -230px
+}
+@media screen and (max-width:487px) {
+  .disco__hands {
+    margin-top: -100px
+  }
 }
 .hanoverMorning-grid {
   display: -ms-grid;
@@ -7836,7 +7879,8 @@ video {
 .pora-valit.stamp::before {
   -webkit-animation: stamp 5s ease;
   animation: stamp 5s ease;
-  display: block
+  display: block;
+  opacity: .6
 }
 .pora-valit.sanremo.stamp::before {
   top: 100px;
@@ -7896,6 +7940,38 @@ video {
     margin: 0 auto;
     width: 90%!important
   }
+}
+.marsel-nice-video {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #181818a9;
+  display: none;
+  z-index: 1000;
+  opacity: 0;
+  -webkit-transition: opacity .5s ease;
+  -o-transition: opacity .5s ease;
+  transition: opacity .5s ease
+}
+.marsel-nice-video video {
+  width: 70%
+}
+.marsel-nice-video.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1
 }
 .sanremoColage-grid {
   display: -ms-grid;

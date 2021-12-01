@@ -35,7 +35,7 @@ setTimeout(() => {
         [0, 1],
       ],
       rotate: [
-        ["elInY", "elOutY*4"],
+        ["elHeight", "elHeight*10"],
         [0, 720],
       ],
     },
