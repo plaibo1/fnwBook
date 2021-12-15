@@ -198,28 +198,28 @@ const MENU_ITEMS = [
     image: "img/countries/RUS.svg",
     links: [
       { href: "/moscow.html", text: "Москва" },
-      { href: "/moscow-minsk.html", text: "Москва-Минск" },
+      { href: "/moscow-minsk.html", text: "Москва - Минск" },
     ],
   },
   {
     image: "img/countries/BLR.svg",
     links: [
       { href: "/minsk.html", text: "Минск" },
-      { href: "/minsk-warsawa.html", text: "Минск-Варшава" },
+      { href: "/minsk-warsawa.html", text: "Минск - Варшава" },
     ],
   },
   {
     image: "img/countries/POL.svg",
     links: [
       { href: "/warsawa.html", text: "Варшава" },
-      { href: "/warsawa-berlin.html", text: "Варшава-Берлин" },
+      { href: "/warsawa-berlin.html", text: "Варшава - Берлин" },
     ],
   },
   {
     image: "img/countries/DEO-white.png",
     links: [
       { href: "/berlin.html", text: "Берлин" },
-      { href: "/berlin-hanover.html", text: "Берлин-Ганновер" },
+      { href: "/berlin-hanover.html", text: "Берлин - Ганновер" },
     ],
   },
   {
@@ -232,14 +232,14 @@ const MENU_ITEMS = [
       { href: "/amsterdam-01.html", text: "Амстердам #1" },
       { href: "/amsterdam-02.html", text: "Амстердам #2" },
       { href: "/amsterdam-03.html", text: "Амстердам #3" },
-      { href: "/amsterdam-brussels.html", text: "Амстердам-Брюссель" },
+      { href: "/amsterdam-brussels.html", text: "Амстердам - Брюссель" },
     ],
   },
   {
     image: "img/countries/BEL-no.svg",
     links: [
       { href: "/brussels.html", text: "Брюссель" },
-      { href: "/brussels-paris.html", text: "Брюссель-Париж" },
+      { href: "/brussels-paris.html", text: "Брюссель - Париж" },
     ],
   },
   {
@@ -254,23 +254,23 @@ const MENU_ITEMS = [
     links: [
       { href: "/lyon-01.html", text: "Лион #1" },
       { href: "/lyon-02.html", text: "Лион #2" },
-      { href: "/lyon-grenoble.html", text: "Лион-Гренобль" },
-      { href: "/grenoble-marseilles.html", text: "Гренобль-Марсель" },
+      { href: "/lyon-grenoble.html", text: "Лион - Гренобль" },
+      { href: "/grenoble-marseilles.html", text: "Гренобль - Марсель" },
       { href: "/marseilles.html", text: "Марсель" },
-      { href: "/marseilles-nice.html", text: "Марсель-Ницца" },
+      { href: "/marseilles-nice.html", text: "Марсель - Ницца" },
       { href: "/nice-sanremo.html", text: "Ницца - Сан-Ремо" },
       { href: "/sanremo.html", text: "Сан-Ремо" },
       { href: "/sanremo-monaco-cannes.html", text: "Сан-Ремо - Монако - Канны" },
       { href: "/cannes-nimes.html", text: "Канны - Ним" },
-      { href: "/nimes-nimes-montpellier.html", text: "Ним - Ним - Монпелье" },
       { href: "/nimes-montpellier.html", text: "Ним - Монпелье" },
-      { href: "/montpellier-montpellier.html", text: "Монпелье - Монпелье" },
-      { href: "/montpellier-girone.html", text: "Монпелье - Жирона" },
+      { href: "/montpellier.html", text: "Монпелье" },
+      { href: "/montpellier-perpignan.html", text: "Монпелье - Перпиньян" },
     ],
   },
   {
     image: "img/countries/spain.svg",
     links: [
+      { href: "/perpignan.html", text: "Перпиньян" },
       { href: "/girone.html", text: "Жирона" },
       { href: "/epilogue.html", text: "Эпилог" },
     ],

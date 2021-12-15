@@ -841,3 +841,53 @@ footer
 
 footer.hide
     opacity: 0
+
+
+.thnx-title
+    text-align: center
+    margin-bottom: 100px
+
+.thanx
+    &__title
+        margin-bottom: 30px
+        @media screen and ( max-width: 425px )
+            margin-bottom: 10px
+
+    &__list
+        display: flex
+        align-items: center
+        margin-bottom: 15px
+
+        &__text
+            color: #181818
+            text-decoration: none
+            &:hover
+                background-color: #ffe605
+            @media screen and ( max-width: 350px )
+                font-size: 14px
+                
+        &__img
+            margin-right: 8px
+            @media screen and ( max-width: 350px )
+                margin-right: 3px
+
+    @media screen and ( max-width: 576px )
+        margin-bottom: 40px
+        
+
+.linksEditor
+    width: 100%
+    position: relative
+    word-wrap: break-word
+    margin-bottom: 40px
+    a
+        text-decoration: none
+        color: #181818
+        margin-bottom: 2px
+        display: block
+        &:hover
+            background-color: #ffe605
+        &.grey
+            background-color: #ececec
+            &:hover
+                background-color: #ffe605
