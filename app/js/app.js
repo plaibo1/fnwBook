@@ -220,11 +220,8 @@ const MENU_ITEMS = [
     links: [
       { href: "/berlin.html", text: "Берлин" },
       { href: "/berlin-hanover.html", text: "Берлин - Ганновер" },
+      { href: "/hanover.html", text: "Ганновер" }
     ],
-  },
-  {
-    image: "img/countries/DEO-white.png",
-    links: [{ href: "/hanover.html", text: "Ганновер" }],
   },
   {
     image: "img/countries/NLD.svg",
@@ -247,11 +244,6 @@ const MENU_ITEMS = [
     links: [
       { href: "/paris-01.html", text: "Париж #1" },
       { href: "/paris-02.html", text: "Париж #2" },
-    ],
-  },
-  {
-    image: "img/countries/FRA-no.svg",
-    links: [
       { href: "/lyon-01.html", text: "Лион #1" },
       { href: "/lyon-02.html", text: "Лион #2" },
       { href: "/lyon-grenoble.html", text: "Лион - Гренобль" },
@@ -259,8 +251,18 @@ const MENU_ITEMS = [
       { href: "/marseilles.html", text: "Марсель" },
       { href: "/marseilles-nice.html", text: "Марсель - Ницца" },
       { href: "/nice-sanremo.html", text: "Ницца - Сан-Ремо" },
+    ],
+  },
+  {
+    image: "img/countries/ITA.svg",
+    links: [
       { href: "/sanremo.html", text: "Сан-Ремо" },
       { href: "/sanremo-monaco-cannes.html", text: "Сан-Ремо - Монако - Канны" },
+    ],
+  },
+  {
+    image: "img/countries/FRA-no.svg",
+    links: [
       { href: "/cannes-nimes.html", text: "Канны - Ним" },
       { href: "/nimes-montpellier.html", text: "Ним - Монпелье" },
       { href: "/montpellier.html", text: "Монпелье" },
