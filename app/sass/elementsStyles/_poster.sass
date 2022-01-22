@@ -1,0 +1,83 @@
+.poster
+    background-image: url('../img/indexPoster.png')
+    position: relative
+    width: 100%
+    min-height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+            
+    &::before
+        content: ""
+        position: absolute
+        width: 100%
+        height: 100%
+        left: 0
+        top: 0
+        background-color: #1b1b1b
+        opacity: 0.7
+    &__blur
+        width: 100%
+        height: 100%
+        position: absolute
+        left: 0
+        top: 0
+        backdrop-filter: blur(5px)
+
+    &-img
+        width: 585px
+        position: relative
+        @media screen and ( max-width: 1440px )
+            width: 450px
+        @media screen and ( max-width: 544px )
+            width: 390px
+        @media screen and ( max-width: 425px )
+            width: 90%
+            
+            
+        &__baseImg
+            border-radius: 10px
+            box-shadow: 0 0 30px #353535
+            width: 100%
+            
+        &__title
+            width: 70% !important
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+            top: 12%
+            @media screen and ( max-width: 425px )
+                top: 20%
+        
+        &__button
+            padding: 15px 20px
+            background-color: #acd123
+            position: absolute
+            left: 50%
+            bottom: 22%
+            transform: translateX(-50%)
+            font-family: 'firenight', sans-serif
+            text-decoration: none
+            color: #fff
+            font-size: 30px
+            -webkit-text-stroke-width: 1.91px
+            -webkit-text-stroke-color: #000000
+            border: 2px solid #000
+            background-color: #fff
+            transition: all .3s ease-in-out
+            &:hover
+                background-color: $yellow
+                color: #000
+                -webkit-text-stroke-width: 0px
+            @media screen and ( max-width: 557px )
+                font-size: 22px
+
+            @media screen and ( max-width: 420px )
+                width: 155px
+                text-align: center
+                padding: 6px 0
+                
+
+                
+                
+

@@ -64,6 +64,190 @@ function enableFullScreenForImages() {
   
   const fullScreenEnabled = new Set([
     "img/marseilles-nice/pitt.png",
+    "img/moscow/sleep2.png",
+    "img/moscow/sleep1.png",
+    "img/moscow/sleep-sm.png",
+    "img/moscow-minsk/picOfKostyaAndPrej.png",
+    "img/minsk/minsk.png",
+    "img/minsk/ministerstvo.png",
+    "img/minsk/river.png",
+    "img/minsk-warsawa/rambo.png",
+    "img/minsk-warsawa/matrix.png",
+    "img/minsk-warsawa/danger.png",
+    "img/minsk-warsawa/tonus.png",
+    "img/warsawa/start.png",
+    "img/warsawa/start-sm.png",
+    "img/warsawa/egor-dance.gif",
+    "img/warsawa/fest.jpg",
+    "img/warsawa/party.png",
+    "img/warsawa-berlin/coatman.svg",
+    "img/warsawa-berlin/poloroid.png",
+    "img/warsawa-berlin/benzo-state.png",
+    "img/berlin/mac.jpg",
+    "img/berlin/basket.gif",
+    "img/berlin/roll.jpg",
+    "img/berlin/burger-xl.jpg",
+    "img/berlin/burger.png",
+    "img/berlin/pasport.png",
+    "img/berlin/nightegor.jpg",
+    "img/berlin/lsd.jpg",
+    "img/berlin/gay.jpg",
+    "img//berlin/arcetecture.jpg",
+    "img/berlin/map.jpg",
+    "img/berlin-hanover/jim.gif",
+    "img/berlin-hanover/paint.png",
+    "img/berlin-hanover/paint-sm.png",
+    "img/berlin-hanover/mcPrej.png",
+    "img/hanover/honoverMorning.png",
+    "img/hanover/card.png",
+    "img/hanover/hellgatewithdude.jpg",
+    "img/hanover/cold.jpg",
+    "img/amsterdam01/amster.jpg",
+    "img/amsterdam01/golum.jpg",
+    "img/amsterdam01/haribo.jpg",
+    "img/amsterdam01/yandexWeed.png",
+    "img/amsterdam01/turgenev.jpg",
+    "img/amsterdam02/boysInJacket.png",
+    "img/amsterdam02/panic.PNG",
+    "img/amsterdam02/meme.jpg",
+    "img/amsterdam02/SuperMarioBros-web.jpg",
+    "img/amsterdam02/SuperMarioBros.jpg",
+    "img/amsterdam03/lover.svg",
+    "img/amsterdam03/momento.svg",
+    "img/amsterdam03/Breaking_Bad.jpg",
+    "img/amsterdam03/prejAmdKostya.gif",
+    "img/amsterdam03/amster-photo1.svg",
+    "img/amsterdam03/pepe-amster.svg",
+    "img/amsterdam03/amster-photo2.png",
+    "img/amsterdam-brussels/egorPhoto.jpg",
+    "img/amsterdam-brussels/soloviev.jpg",
+    "img/amsterdam-brussels/nogodplease.png",
+    "img/amsterdam-brussels/graffity.svg",
+    "img/amsterdam-brussels/sober.svg",
+    "img/amsterdam-brussels/bench.svg",
+    "img/amsterdam-brussels/bel-ilustr.svg",
+    "img/brusseles/military-car.jpg",
+    "img/brusseles/bb.gif",
+    "img/brusseles/brusMap.png",
+    "img/brusseles/skype.png",
+    "img/brusseles/photo-1.jpg",
+    "img/brusseles/photo-2.gif",
+    "img/brusseles/photo-2.jpg",
+    "img/brusseles/photo-3.jpg",
+    "img/brusseles/photo-4.jpg",
+    "img/brussels-paris/wlm.png",
+    "img/brussels-paris/rorshah.gif",
+    "img/brussels-paris/hui.jpg",
+    "img/brussels-paris/egorGrass.jpg",
+    "img/brussels-paris/reno.svg",
+    "img/brussels-paris/reno-sm.svg",
+    "img/brussels-paris/lukash.png",
+    "img/paris01/wolf.png",
+    "img/paris01/toxic.png",
+    "img/paris01/kids.gif",
+    "img/paris01/pasiki.JPG",
+    "img/paris01/morty.gif",
+    "img/paris01/hypnose.gif",
+    "img/paris02/transformers.gif",
+    "img/paris02/basnya.JPG",
+    "img/paris02/confuc.jpg",
+    "img/paris02/shrelock.gif",
+    "img/paris02/monkey.png",
+    "img/paris02/walkingToRiver.jpg",
+    "img/paris02/1.JPG",
+    "img/paris02/2.JPG",
+    "img/paris02/3.JPG",
+    "img/paris02/4.JPG",
+    "img/lyon01/clinic.gif",
+    "img/lyon01/loveIs.png",
+    "img/lyon01/meme.png",
+    "img/lyon01/gradation.png",
+    "img/lyon01/vokzal.png",
+    "img/lyon01/boys.gif",
+    "img/lyon01/photo-1.JPG",
+    "img/lyon01/sobyanin.svg",
+    "img/lyon01/password.png",
+    "img/lyon01/end.png",
+    "img/lyon02/oneEntireLater.png",
+    "img/lyon02/photo.JPG",
+    "img/lyon02/vs.png",
+    "img/lyon02/red.png",
+    "img/lyon02/products.jpg",
+    "img/lyon02/cart.JPG",
+    "img/lyon02/mosue.gif",
+    "img/lyon02/end.png",
+    "img/lyon-grenoble/toyStory.png",
+    "img/lyon-grenoble/photo.JPG",
+    "img/lyon-grenoble/rocks.JPG",
+    "img/lyon-grenoble/album-pic.jpg",
+    "img/lyon-grenoble/photo-2.png",
+    "img/grenoble-marseilles/photo.JPG",
+    "img/grenoble-marseilles/mary.gif",
+    "img/grenoble-marseilles/fontain.png",
+    "img/grenoble-marseilles/marka.png",
+    "img/grenoble-marseilles/photo-2.JPG",
+    "img/grenoble-marseilles/field.gif",
+    "img/grenoble-marseilles/photo-3.JPG",
+    "img/marseilles/start.gif",
+    "img/marseilles/nahui.jpg",
+    "img/marseilles/shit.gif",
+    "img/marseilles/end.png",
+    "img/marseilles-nice/firstPhoto.jpg",
+    "img/marseilles-nice/runers.png",
+    "img/marseilles-nice/basketball.png",
+    "img/marseilles-nice/jack.gif",
+    "img/marseilles-nice/pitt.png",
+    "img/marseilles-nice/toNice.png",
+    "img/marseilles-nice/splinter.png",
+    "img/nice-sanremo/nice.png",
+    "img/nice-sanremo/tree.jpg",
+    "img/nice-sanremo/monacoView.jpg",
+    "img/nice-sanremo/1.JPG",
+    "img/nice-sanremo/2.JPG",
+    "img/nice-sanremo/3.JPG",
+    "img/sanremo/prejWine.jpg",
+    "img/sanremo/marlboro.jpg",
+    "img/sanremo/dojo.jpg",
+    "img/sanremo/sanremo.png",
+    "img/sanremo-monaco/sobor.png",
+    "img/sanremo-monaco/mario.jpg",
+    "img/cannes-nimes/egorGif.gif",
+    "img/cannes-nimes/jeben.gif",
+    "img/cannes-nimes/hooligans.jpg",
+    "img/cannes-nimes/comps.jpg",
+    "img/cannes-nimes/ArenesdeNimes.png",
+    "img/cannes-nimes/15.png",
+    "img/nimes-montpellier/teeth.png",
+    "img/nimes-montpellier/mtv.gif",
+    "img/nimes-montpellier/egor.gif",
+    "img/nimes-montpellier/beachShining.jpg",
+    "img/nimes-montpellier/final.jpg",
+    "img/nimes-montpellier/start.JPG",
+    "img/nimes-montpellier/zamok.gif",
+    "img/nimes-montpellier/mapWay.gif",
+    "img/nimes-montpellier/parking.jpg",
+    "img/montpellier/crossfade1.gif",
+    "img/montpellier-girone/spider.jpg",
+    "img/montpellier-girone/kanye.gif",
+    "img/montpellier-girone/alexander-nevsky.png",
+    "img/montpellier-girone/gironePhoto.jpg",
+    "img/montpellier-girone/egorAndLidle.png",
+    "img/montpellier-girone/mirror.png",
+    "img/montpellier-girone/nearLead.png",
+    "img/montpellier-girone/photoBig.JPG",
+    "img/montpellier-girone/photoSmall.JPG",
+    "img/girone/casting.png",
+    "img/girone/olympicGames.jpg",
+    "img/girone/palatka.gif",
+    "img/girone/final.jpg",
+    "img/epilogue/start.jpg",
+    "img/epilogue/2.jpg",
+    "img/epilogue/3.jpg",
+    "img/epilogue/4.jpg",
+    "img/epilogue/4.jpg",
+    "img/epilogue/5.jpg",
+    "img/epilogue/6.jpg",
+    "img/epilogue/7.jpg",
   ]);
 
   const images = Array.from(document.querySelectorAll("img"));
@@ -81,6 +265,7 @@ function enableFullScreenForImages() {
     const img = document.createElement("img");
     img.src = imageSource;
     img.style.maxHeight = window.innerHeight - 50 + "px";
+    // img.style.height = window.innerHeight - 150 + "px";
 
     fullScreenImgWrapper.append(img);
     document.querySelector(".main").append(fullScreenImgWrapper);
@@ -134,9 +319,37 @@ function enableMenu() {
   const burger = document.querySelector("#burger");
 
   function onMenuTogglersClick(evt) {
+
+    // const activeItem = document.querySelector('.menu__countries__item .active');
+    // const rect = activeItem.getBoundingClientRect();
+
+    // const togglePressed = evt.composedPath().some(
+    //   el => {
+    //     if(el.id === 'burger') {
+    //       menu.scrollTo({
+    //         top: rect.top - 200,
+    //         behavior: "smooth"
+    //       })
+    //       return el.id === 'burger'
+    //     }
+    //     else {
+    //       return el.classList.contains('menu__header__close')
+    //     }
+    //   }
+    // );
+
     const togglePressed = evt.composedPath().some(
       el => el.id === 'burger' || el.classList.contains('menu__header__close')
     );
+
+    const activeItem = document.querySelector('.menu__countries__item .active') || document.querySelector('.menu__countries__item');
+    const rect = activeItem.getBoundingClientRect();
+
+    menu.scrollTo({
+      top: rect.top - 200,
+      behavior: "smooth"
+    })
+    
 
     if (togglePressed) {
       menu.classList.toggle("closed");

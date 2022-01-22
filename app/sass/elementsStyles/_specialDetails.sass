@@ -891,3 +891,37 @@ footer.hide
             background-color: #ececec
             &:hover
                 background-color: #ffe605
+
+// ==== index ===== //
+[data-aos="indexTitle"]
+    opacity: 0
+    transform: translateX(-50%) translateY(0)
+    &.aos-animate
+        transform: translateX(-50%) translateY(20%)
+        opacity: 1
+
+[data-aos="indexBtn"]
+    opacity: 0
+    transform: translateX(-50%) translateY(0)
+    &.aos-animate
+        transform: translateX(-50%) translateY(40%)
+        opacity: 1
+
+
+.perpignan-img
+    img
+        &:nth-child(2)
+            position: absolute
+            width: 300px
+            left: -50px
+            bottom: -10px
+            transform: rotate(6deg)
+            @media screen and ( max-width: 768px )
+                width: 260px
+                left: -25px
+            @media screen and ( max-width: 576px )
+                width: 45%
+                left: -10px
+                
+                
+            

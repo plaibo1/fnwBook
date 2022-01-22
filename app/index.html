@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Мы не местные</title>
 	<link rel="stylesheet" href="./css/plugins/bootstrap-grid.css">
+	<link rel="stylesheet" href="./css/plugins/aos.css">
 	<link rel="stylesheet" href="./css/main.css">
 
 	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
@@ -19,39 +20,48 @@
 </head>
 <body>
 	
-
-	<!-- nav -->
-	<nav class="nav">
-		<div class="container">
-			<div class="d-flex justify-content-between">
-				<div class="nav__logo"><img src="img/logo.svg" alt="img"></div>
-				<div class="nav__burger" id="burger">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</div>
-		</div>
-	</nav>
-	<!-- /nav -->
-
-<div class="main">
-
-
+<!-- nav -->
+<nav class="nav">
 	<div class="container">
-		<div class="row d-flex justify-content-center">
-			<div class="col-lg-8 text-center">
-				<h1 class="mb-xl">Здесь будет обложка или главная страница</h1>
-				<p class="no-format">Прочитать предисловие можно <a href="./preface.html">Здесь</a></p>
+		<div class="d-flex justify-content-between">
+			<div class="nav__logo"><img src="img/logo.svg" alt="img"></div>
+			<div class="nav__burger" id="burger">
+				<span></span>
+				<span></span>
+				<span></span>
 			</div>
 		</div>
 	</div>
+</nav>
+<!-- /nav -->
 
+
+<div class="poster-overflow">
+	<div class="poster">
+		<div class="poster__blur"></div>
+	
+		<div class="img poster-img">
+	
+			<img src='img/posterTitle.png' data-aos="indexTitle" data-aos-duration="1000"  alt="img" class="poster-img__title aos-init">
+			
+			<img src="img/indexPoster.png" alt="img" class="poster-img__baseImg">
+	
+			<a href="./preface.html" class="poster-img__button">Начать читать!</a>
+	
+		</div>
+		
+	</div>
 
 </div>
 
+
+
 	<script src="js/plugins/SmoothScroll.js"></script>
 	<script src="js/plugins/lax.min.js"></script>
+	<script src="js/plugins/aos.js"></script>
+	<script src="js/indexPage.js"></script>
 	<script src="js/app.js"></script>
+	
+	
 </body>
 </html>
