@@ -109,6 +109,27 @@
   width: 91%!important
 }
 @media screen and (max-width:425px) {
+  .red-wine-sm {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3)
+  }
+}
+@media screen and (max-width:375px) {
+  .red-wine-sm {
+    -webkit-transform: scale(1.5) translateY(-10px);
+    -ms-transform: scale(1.5) translateY(-10px);
+    transform: scale(1.5) translateY(-10px)
+  }
+}
+@media screen and (max-width:320px) {
+  .red-wine-sm {
+    -webkit-transform: scale(1.9) translateY(0);
+    -ms-transform: scale(1.9) translateY(0);
+    transform: scale(1.9) translateY(0)
+  }
+}
+@media screen and (max-width:425px) {
   .macmoney {
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
@@ -1775,15 +1796,6 @@ ul li {
   width: 100%;
   height: 100vh;
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   z-index: 10000;
   left: 0;
   top: 0;
@@ -1803,9 +1815,16 @@ ul li {
   z-index: -1
 }
 .openFullScreenImg img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
   -webkit-animation: fadeFullScreenImg .4s ease;
   animation: fadeFullScreenImg .4s ease;
-  max-width: 95%
+  max-width: calc(100vw - 150px);
+  max-height: calc(100vh - 150px)
 }
 @-webkit-keyframes fadeFullScreenImg {
   0% {
@@ -1821,6 +1840,40 @@ ul li {
   }
   100% {
     opacity: 1
+  }
+}
+.fullscreenVideo-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #181818dc;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 999;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease
+}
+.fullscreenVideo-wrapper video {
+  width: 60%
+}
+@media screen and (max-width:1440px) {
+  .fullscreenVideo-wrapper video {
+    width: 70%
+  }
+}
+@media screen and (max-width:1024px) {
+  .fullscreenVideo-wrapper video {
+    width: 80%
   }
 }
 .menu {

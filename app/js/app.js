@@ -264,7 +264,7 @@ function enableFullScreenForImages() {
 
     const img = document.createElement("img");
     img.src = imageSource;
-    img.style.maxHeight = window.innerHeight - 50 + "px";
+    // img.style.maxHeight = window.innerHeight - 50 + "px";
     // img.style.height = window.innerHeight - 150 + "px";
 
     fullScreenImgWrapper.append(img);
@@ -273,6 +273,7 @@ function enableFullScreenForImages() {
     fullScreenImgWrapper.addEventListener("click", (e) => {
       if (!(e.target == img)) {
         fullScreenImgWrapper.style.opacity = 0;
+        document.body.style.overflow = 'visible'
         setTimeout(() => fullScreenImgWrapper.remove(), 300);
       }
     });
@@ -283,9 +284,51 @@ function enableFullScreenForImages() {
       target.classList.contains("openInFullScreen") &&
       typeof target.getAttribute("src") === "string"
     ) {
+      document.body.style.overflow = 'hidden'
       openImage(target.getAttribute("src"));
     }
   });
+}
+
+function enableFullScreenForVideos() {
+
+  const videos = Array.from(document.querySelectorAll("video"));
+
+  videos.forEach( item => {
+    item.addEventListener('click', function() {
+
+      document.body.style.overflow = 'hidden'
+
+      const videoWrapp = document.createElement('div');
+      videoWrapp.classList.add('fullscreenVideo-wrapper');
+
+      const video = document.createElement('video');
+      video.autoplay = 'true';
+      video.setAttribute('loop', '')
+      video.setAttribute('muted', '')
+      video.setAttribute('playsinline', '')
+
+
+      const videoSrc = this.children[0].outerHTML;
+      video.innerHTML = videoSrc;
+
+      videoWrapp.appendChild(video);
+
+      document.body.appendChild(videoWrapp);
+
+
+      // close
+      videoWrapp.addEventListener("click", (e) => {
+        if (!(e.target == video)) {
+          videoWrapp.style.opacity = 0;
+          document.body.style.overflow = 'visible'
+          setTimeout(() => videoWrapp.remove(), 500);
+        }
+      });
+
+    })
+  })
+
 }
 
 function normalizeLineBreaksFor(selectors) {
@@ -385,6 +428,7 @@ window.addEventListener("load", (e) => {
   enableLax();
   enableMenu();
   enableFullScreenForImages();
+  enableFullScreenForVideos();
   normalizeLineBreaksFor([
     "p",
     ".box__text",
@@ -686,6 +730,7 @@ function createPreloader() {
     remove(".scroll-icon__container");
     autoPlay();
     enableLax();
+    
     if (AOS && AOS.init) {
       AOS.init();
     }
