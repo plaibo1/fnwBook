@@ -61,7 +61,7 @@ function enableLax() {
 }
 
 function enableFullScreenForImages() {
-  
+
   const fullScreenEnabled = new Set([
     "img/marseilles-nice/pitt.png",
     "img/moscow/sleep2.png",
@@ -392,7 +392,7 @@ function enableMenu() {
       top: rect.top - 200,
       behavior: "smooth"
     })
-    
+
 
     if (togglePressed) {
       menu.classList.toggle("closed");
@@ -451,6 +451,18 @@ window.addEventListener("load", (e) => {
 // ============= menu ========== //
 
 const MENU_ITEMS = [
+  {
+    image: 'none" style="display:none',
+    links: [
+      { href: "/", text: "Оглавление" },
+    ],
+  },
+  {
+    image: 'none" style="display:none',
+    links: [
+      { href: "/preface.html", text: "Предисловие" },
+    ],
+  },
   {
     image: "img/countries/RUS.svg",
     links: [
@@ -602,12 +614,6 @@ function renderMenu() {
     <div class="menu-main">
       ${header}
       <div class="menu__countries">
-        <a href='/' class="menu__countries__title">
-          Оглавление
-        </a>
-        <a href='./preface.html' class="menu__countries__title">
-          Предисловие
-        </a>
         ${links}
       </div>
     </div>
@@ -730,7 +736,7 @@ function createPreloader() {
     remove(".scroll-icon__container");
     autoPlay();
     enableLax();
-    
+
     if (AOS && AOS.init) {
       AOS.init();
     }
