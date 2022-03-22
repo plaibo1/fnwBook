@@ -60,6 +60,7 @@ function enableLax() {
   });
 }
 
+
 function enableFullScreenForImages() {
 
   const fullScreenEnabled = new Set([
@@ -290,9 +291,11 @@ function enableFullScreenForImages() {
   });
 }
 
+let videos;
+
 function enableFullScreenForVideos() {
 
-  const videos = Array.from(document.querySelectorAll("video"));
+  videos = Array.from(document.querySelectorAll("video"));
 
   videos.forEach( item => {
     item.addEventListener('click', function() {
@@ -329,6 +332,17 @@ function enableFullScreenForVideos() {
     })
   })
 
+}
+
+function removeFullScreenForVideos() {
+  videos.forEach( item => {
+    item.removeEventListener('click', function() {
+
+     
+
+    })
+  }
+  )
 }
 
 function normalizeLineBreaksFor(selectors) {
@@ -429,6 +443,7 @@ window.addEventListener("load", (e) => {
   enableMenu();
   enableFullScreenForImages();
   enableFullScreenForVideos();
+  
   normalizeLineBreaksFor([
     "p",
     ".box__text",
@@ -446,6 +461,7 @@ window.addEventListener("load", (e) => {
   if ('AOS' in window && AOS.init) {
     AOS.init();
   }
+  
 });
 
 // ============= menu ========== //
@@ -737,6 +753,13 @@ function createPreloader() {
     autoPlay();
     enableLax();
 
+    removeFullScreenForVideos();
+    videos = Array.from(document.querySelectorAll("video"));
+    enableFullScreenForVideos();
+
+    // enableFullScreenForImages();
+    
+
     if (AOS && AOS.init) {
       AOS.init();
     }
@@ -794,6 +817,7 @@ function createPreloader() {
       animate((t) => t, progressBarAnimation, 1500);
     }
   };
+
 }
 
 // utils
