@@ -8921,6 +8921,7 @@ video {
 }
 .poster {
   background-image: url(../img/indexPoster.png);
+  background-size: cover;
   position: relative;
   width: 100%;
   min-height: 100vh;
