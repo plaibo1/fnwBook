@@ -2819,7 +2819,8 @@ video {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  position: relative
+  position: relative;
+  width: 100%
 }
 .map__marker.mashrooms img {
   width: 32px
@@ -2844,7 +2845,8 @@ video {
   }
 }
 .map__marker img {
-  width: 20px
+  width: 20px;
+  margin-left: 80%
 }
 .map__border {
   width: 100%;

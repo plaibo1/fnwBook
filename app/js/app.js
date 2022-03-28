@@ -429,6 +429,7 @@ window.addEventListener("load", (e) => {
   enableMenu();
   enableFullScreenForImages();
   enableFullScreenForVideos();
+
   normalizeLineBreaksFor([
     "p",
     ".box__text",
@@ -446,6 +447,7 @@ window.addEventListener("load", (e) => {
   if ('AOS' in window && AOS.init) {
     AOS.init();
   }
+
 });
 
 // ============= menu ========== //
@@ -737,6 +739,13 @@ function createPreloader() {
     autoPlay();
     enableLax();
 
+    removeFullScreenForVideos();
+    videos = Array.from(document.querySelectorAll("video"));
+    enableFullScreenForVideos();
+
+    // enableFullScreenForImages();
+
+
     if (AOS && AOS.init) {
       AOS.init();
     }
@@ -890,3 +899,7 @@ function animate(timing, draw, duration) {
 function selectAll(selector, source = document) {
   return Array.from(source.querySelectorAll(selector));
 }
+
+
+
+
