@@ -332,6 +332,30 @@
     margin-bottom: 6px
   }
 }
+.sandwatch {
+  -webkit-transform: scale(3.5);
+  -ms-transform: scale(3.5);
+  transform: scale(3.5);
+  z-index: -10
+}
+@media screen and (max-width:575px) {
+  .sandwatch {
+    -webkit-transform: scale(2) translateY(15px);
+    -ms-transform: scale(2) translateY(15px);
+    transform: scale(2) translateY(15px)
+  }
+}
+@media screen and (max-width:425px) {
+  .sandwatch {
+    -webkit-transform: scale(2.5) translateY(3px);
+    -ms-transform: scale(2.5) translateY(3px);
+    transform: scale(2.5) translateY(3px)
+  }
+}
+.sandwatch-text {
+  z-index: 29;
+  position: relative
+}
 .img-600 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8178,6 +8202,9 @@ video {
   grid-column: 2/3;
   z-index: 10
 }
+.sanremoColage-grid__img img {
+  position: relative
+}
 .sanremoColage-grid__img img:nth-child(1) {
   -webkit-transform: rotate(8deg);
   -ms-transform: rotate(8deg);
@@ -8188,7 +8215,8 @@ video {
   -webkit-transform: rotate(-5deg);
   -ms-transform: rotate(-5deg);
   transform: rotate(-5deg);
-  margin-bottom: -42px
+  margin-bottom: -42px;
+  z-index: 10
 }
 .sanremoColage-grid__img img:nth-child(3) {
   -webkit-transform: rotate(6deg);

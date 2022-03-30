@@ -218,6 +218,18 @@
     .mcdonald-transfer-mb-sm-6
         margin-bottom: 6px
 
+.sandwatch
+    transform: scale(3.5)
+    z-index: -10
+    @media screen and ( max-width: 575px )
+        transform: scale(2) translateY(15px)
+    @media screen and ( max-width: 425px )
+        transform: scale(2.5) translateY(3px)
+        
+        
+    &-text
+        z-index: 29
+        position: relative
 // ======== hanover ====== //
 .img-600
     display: flex
