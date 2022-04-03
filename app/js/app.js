@@ -338,7 +338,7 @@ function removeFullScreenForVideos() {
   videos.forEach( item => {
     item.removeEventListener('click', function() {
 
-     
+
 
     })
   }
@@ -808,9 +808,16 @@ function createPreloader() {
       const progressBar = last("footer .map__border__solid");
 
       const progressBarAnimation = (progress) => {
+
+        const mapIconStart = last(".map-icon-start");
+        const mapIconFinish = last(".map-icon-finish");
+
+        mapIconStart.style.opacity = '0';
+
         progressBar.style.width = `${Math.round(progress * 100)}%`;
         if (progress === 1) {
           update(articleIndx + 1);
+          mapIconFinish.style.opacity = '1';
         }
       };
 

@@ -29,7 +29,7 @@
                     width: 33px
         img
             width: 20px
-            margin-left: 80%
+            transition: 0.6s ease all
 
 
     &__border
@@ -64,7 +64,7 @@
                     width: 8px
                     height: 8px
                     border-radius: 50%
-                    background-color:#070709
+                    background-color: #070709
         &.dark
             border-top: 5px $text-white dashed
     &__flag
@@ -84,6 +84,13 @@
             width: 80%
             display: flex
             justify-content: space-between
+
+
+.map-icon-start
+    margin-left: calc(20% - 20px)
+
+.map-icon-finish
+    margin-left: calc(60% - 20px)
 
 @media screen and (max-width: 425px)
     .map
